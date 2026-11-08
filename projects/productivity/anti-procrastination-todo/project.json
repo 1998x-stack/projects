@@ -1,7 +1,77 @@
 {
-  "id":"anti-procrastination-todo", "title":"Beyond the To-Do List", "titleZh":"防拖延 TODO：从计划到行动", "subtitle":"Behavior-aware productivity", "category":"productivity", "status":"planned", "type":"Research queue", "publishedAt":null, "updatedAt":"2026-11-08", "featured":false, "order":2,
-  "summary":"A planned research track into why task systems fail at the moment of action, and how product design might reduce procrastination.",
-  "summaryZh":"待开展：研究为何待办工具无法解决启动困难，以及如何通过产品设计减少拖延。",
-  "tags":["Productivity", "Behavior design", "Research planned"],
-  "signal":"Research pending", "problem":"Research pending — no validated finding is asserted.", "thesis":"To be developed after primary-source research.", "findings":[], "risks":[], "method":"Not started", "sourceCount":0, "sourceLinks":[], "files":[]
+  "id": "anti-procrastination-todo",
+  "title": "Beyond the To-Do List",
+  "titleZh": "TODO List × 拖延症解决：从计划到行动",
+  "subtitle": "From task tracking to meaningful action",
+  "category": "productivity",
+  "status": "published",
+  "type": "Market research",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-09",
+  "featured": true,
+  "order": 2,
+  "summary": "Primary-source market research on anti-procrastination task systems across Hacker News and Product Hunt, comparing behavioral mechanisms, product UX, user criticism and testable product opportunities.",
+  "summaryZh": "基于 Hacker News 与 Product Hunt 的 26 条原始来源，分析 8 款重点竞品及补充案例的产品定位、执行机制、交互设计、用户评价与可验证创业机会。",
+  "tags": [
+    "Productivity",
+    "Anti-procrastination",
+    "Behavior design",
+    "Task initiation",
+    "Market research"
+  ],
+  "signal": "Start-first execution assistance",
+  "problem": "Conventional to-do lists help people remember tasks, but often fail at the moment of starting difficult or emotionally aversive work.",
+  "thesis": "A lightweight start-first layer that identifies a task's friction and proposes an editable 2–5 minute first action may deliver more value than another full-featured task manager; this remains an unvalidated hypothesis.",
+  "findings": [
+    "Task capture and categorization are not the same as overcoming initiation resistance.",
+    "Design strategies cluster around single-task focus, feasible capacity planning, task breakdown, timeboxing and accountability.",
+    "User opinions conflict on reminders, AI prioritization, customization and coercive blocking; intervention intensity should be user-controlled.",
+    "Reliability is essential: task loss, duplication or reordering complaints can destroy trust before behavior design helps.",
+    "Prioritize measuring the start rate of difficult tasks over counting completed low-effort checkboxes."
+  ],
+  "risks": [
+    "Public community comments are a non-representative sample and do not establish product efficacy.",
+    "Research does not include hands-on QA, retention cohorts or willingness-to-pay experiments.",
+    "AI-generated steps require user editing and error handling; forced reminders may worsen some users' anxiety."
+  ],
+  "method": "Qualitative desk research (2017–2026 discussions, with emphasis on recent signals): Hacker News threads and Product Hunt product/review pages; A/B/C evidence distinctions, first-person criticism and explicit research limitations. 26 linked original source entries.",
+  "sourceCount": 26,
+  "sourceLinks": [
+    {
+      "label": "HN — TODO apps are meant for robots",
+      "url": "https://news.ycombinator.com/item?id=36745858"
+    },
+    {
+      "label": "HN — ADHD to-do app needs",
+      "url": "https://news.ycombinator.com/item?id=43416755"
+    },
+    {
+      "label": "HN — 3 & Done AI task triage",
+      "url": "https://news.ycombinator.com/item?id=50151980"
+    },
+    {
+      "label": "PH — Llama Life reviews",
+      "url": "https://www.producthunt.com/products/llama-life/reviews"
+    },
+    {
+      "label": "PH — Blitzit reviews",
+      "url": "https://www.producthunt.com/products/blitzit-2/reviews"
+    },
+    {
+      "label": "PH — goblin.tools",
+      "url": "https://www.producthunt.com/products/goblin-tools"
+    }
+  ],
+  "files": [
+    {
+      "label": "Read complete research report",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/research-2026-11.md"
+    },
+    {
+      "label": "Download formatted Word report",
+      "format": "DOCX",
+      "path": "projects/productivity/anti-procrastination-todo/reports/research-2026-11.docx"
+    }
+  ]
 }
