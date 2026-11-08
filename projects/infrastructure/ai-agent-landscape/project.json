@@ -1,0 +1,69 @@
+{
+  "id": "ai-agent-landscape",
+  "title": "AI-Agent Landscape",
+  "titleZh": "AI-Agent 产品市场深度调研",
+  "subtitle": "From autonomy demos to verifiable work delivery",
+  "category": "infrastructure",
+  "status": "published",
+  "type": "Market research",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "featured": true,
+  "order": 2,
+  "summary": "An evidence-aware review of 14 AI-agent product lines across general execution, research, coding, personal assistants and enterprise automation, synthesizing Hacker News and Product Hunt feedback.",
+  "summaryZh": "对 14 个 AI-Agent 产品/产品线开展 HN 与 Product Hunt 桌面调研，深度比较定位、交互、控制权、用户反馈与可验证交付的创业机会。",
+  "tags": [
+    "AI Agents",
+    "Market research",
+    "Hacker News",
+    "Product Hunt",
+    "Agent UX",
+    "Workflow automation"
+  ],
+  "signal": "Trust and verifiable task outcomes",
+  "problem": "Agent demonstrations obscure the cost of verifying results, recovering from errors and controlling actions, making buyers struggle to identify real ROI.",
+  "thesis": "A focused agent that ships verifiable outcomes inside a controlled workflow is a more testable product wedge than a general-purpose autonomy wrapper. This is a research hypothesis, not validated PMF.",
+  "findings": [
+    "General-purpose, coding, browser, persistent-personal and workflow agents compete through distinct execution and oversight models.",
+    "HN critiques tend to examine reliability, security and rework; PH reviews often focus on onboarding and the apparent usefulness of delivered artifacts.",
+    "Star ratings and marketing demonstrations are not cross-product completion benchmarks; measured human intervention and outcome accuracy matter.",
+    "Domain-specific tests with explicit approval, provenance, rollback and cost tracking are a promising next step, not an observed commercial result."
+  ],
+  "risks": [
+    "Published evidence is desk research, without a controlled 14-product benchmark",
+    "PH/HN commenters are self-selected and not representative of all users",
+    "Product capabilities, billing and privacy boundaries change rapidly",
+    "ROI and willingness to pay must be validated on real tasks"
+  ],
+  "method": "Primary-source desk research of Hacker News discussions, Product Hunt listings/reviews, vendor documents and independent studies. Includes 36 bibliographic entries; differentiates claims, user opinions and strategic hypotheses.",
+  "sourceCount": 36,
+  "sourceLinks": [
+    {
+      "label": "Hacker News: ChatGPT agent discussion",
+      "url": "https://news.ycombinator.com/item?id=44595492"
+    },
+    {
+      "label": "Product Hunt: AI Agents",
+      "url": "https://www.producthunt.com/categories/ai-agents"
+    },
+    {
+      "label": "Hacker News: Devin launch discussion",
+      "url": "https://news.ycombinator.com/item?id=39679787"
+    },
+    {
+      "label": "METR: developer productivity study",
+      "url": "https://arxiv.org/abs/2507.09089"
+    },
+    {
+      "label": "OWASP Agentic AI Top 10",
+      "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+    }
+  ],
+  "files": [
+    {
+      "label": "Read full research report",
+      "format": "Markdown",
+      "path": "projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md"
+    }
+  ]
+}
