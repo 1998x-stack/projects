@@ -14,7 +14,7 @@
 | --- | --- | --- | --- |
 | **Knowledge Intelligence / 知识智能** | [LLM × XMind](projects/knowledge/llm-xmind/) | **Published research** (2026-11-08) | [Deep dive (MD)](projects/knowledge/llm-xmind/reports/research-2026-11.md) · [Word](projects/knowledge/llm-xmind/reports/research-2026-11.docx) |
 | **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | **Published research** (2026-11-08) | [Deep dive (MD)](projects/productivity/anti-procrastination-todo/reports/research-2026-11.md) · [Word](projects/productivity/anti-procrastination-todo/reports/research-2026-11.docx) |
-| **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | Planned · no published research | Research placeholder |
+| **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | **Published research** (2026-11-08) | [Deep dive (MD)](projects/professional/llm-legal-assistant/reports/research-2026-11.md) · [Word](projects/professional/llm-legal-assistant/reports/research-2026-11.docx) |
 | **Tools & Infrastructure / 基础设施** | [AI-Agent Landscape](projects/infrastructure/ai-agent-landscape/) | **Published research** (2026-11-09) | [Deep dive (MD)](projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md) |
 
 ## Why the system is structured this way
@@ -33,7 +33,7 @@ projects/
 ├── productivity/
 │   └── anti-procrastination-todo/ # Published source-led research
 ├── professional/
-│   └── llm-legal-assistant/      # Planned / placeholder
+│   └── llm-legal-assistant/      # Published legal AI research + report assets
 └── infrastructure/
     └── ai-agent-landscape/        # 14-product HN × PH deep-dive
 site/                             # Public site source: HTML, CSS, JS

@@ -1,7 +1,73 @@
 {
-  "id":"llm-legal-assistant", "title":"Legal Intelligence", "titleZh":"LLM × 法律助手", "subtitle":"AI for professional legal workflows", "category":"professional", "status":"planned", "type":"Research queue", "publishedAt":null, "updatedAt":"2026-11-08", "featured":false, "order":3,
-  "summary":"A planned research track into evidence-sensitive legal AI assistants, professional review and workflow reliability.",
-  "summaryZh":"待开展：研究法律 AI 助手的证据链、专业人员复核和高可靠工作流。",
-  "tags":["Legal AI", "Professional workflows", "Research planned"],
-  "signal":"Research pending", "problem":"Research pending — no validated finding is asserted.", "thesis":"To be developed after primary-source research.", "findings":[], "risks":[], "method":"Not started", "sourceCount":0, "sourceLinks":[], "files":[]
+  "id": "llm-legal-assistant",
+  "title": "Legal Intelligence",
+  "titleZh": "LLM × 法律助手：产品生态与创业机会",
+  "subtitle": "Evidence-grounded legal AI product research",
+  "category": "professional",
+  "status": "published",
+  "type": "Market research",
+  "publishedAt": "2026-11-08",
+  "updatedAt": "2026-11-09",
+  "featured": true,
+  "order": 2,
+  "summary": "A source-linked research dossier on LLM-powered legal assistants across Hacker News and Product Hunt, covering positioning, product design, user feedback, reliability risks and a narrow-contract MVP thesis.",
+  "summaryZh": "基于 Hacker News 与 Product Hunt 一手讨论的法律 AI 产品研究：竞品定位、设计范式、用户评价、证据可靠性与合同审阅 MVP 假设。",
+  "tags": [
+    "LLM",
+    "Legal AI",
+    "Contract review",
+    "Product research",
+    "Human-in-the-loop"
+  ],
+  "signal": "Contract-risk workbench — validation hypothesis",
+  "problem": "Business users and lawyers need to understand legal documents, locate consequential risks and produce reviewable work while minimizing hallucinations, privacy exposure and jurisdiction mistakes.",
+  "thesis": "A jurisdiction-scoped contract review workbench with clause-level evidence, editable redlines, auditable review and human handoff may create more durable value than a generic AI lawyer chat interface. PMF is not established.",
+  "findings": [
+    "Product Hunt feedback values draft acceleration and plain-language comprehension, but users still report edits, unclear scope, latency and onboarding friction.",
+    "Hacker News debate centers on authoritative case law access, professional judgment, data confidentiality, correct citations and enterprise workflow integration.",
+    "Product designs cluster around document drafting, consumer explanation, AI-plus-lawyer handoff, email-native legal agents, law-firm operations and jurisdiction-specific research.",
+    "A limited-jurisdiction NDA/SaaS contract-risk reviewer is a testable wedge, not validated demand or a legal quality guarantee."
+  ],
+  "risks": [
+    "Small, nonrepresentative PH review samples and anonymous HN discourse cannot establish demand or adoption.",
+    "No product trials, paid conversion/retention measurement, legal accuracy benchmark or independent security audit were conducted.",
+    "Jurisdiction, license-to-practice, model hallucinations, confidentiality, privilege and source recency require specialist review.",
+    "No conclusions in this research should be used as legal advice."
+  ],
+  "method": "Desk research of original Product Hunt launch/review pages (nine representative products) and Hacker News threads, cross-checked against Stanford HAI's 2024 study, ABA Formal Opinion 512 and vendor documentation. Evidence grades distinguish independent findings, first-person comments, discussion opinions and promotional claims.",
+  "sourceCount": 22,
+  "sourceLinks": [
+    {
+      "label": "Genie AI reviews · Product Hunt",
+      "url": "https://www.producthunt.com/products/genie-ai/reviews"
+    },
+    {
+      "label": "LegalNow · Product Hunt",
+      "url": "https://www.producthunt.com/products/legalnow-ai-lawyer-for-small-business"
+    },
+    {
+      "label": "Mike open-source legal AI · Hacker News",
+      "url": "https://news.ycombinator.com/item?id=47956739"
+    },
+    {
+      "label": "Legal AI reliability benchmark · Stanford HAI",
+      "url": "https://hai.stanford.edu/news/ai-trial-legal-models-hallucinate-1-out-6-or-more-benchmarking-queries"
+    },
+    {
+      "label": "Formal Opinion 512 · ABA",
+      "url": "https://www.americanbar.org/content/aba-cms-dotorg/en/news/abanews/aba-news-archives/2024/07/aba-issues-first-ethics-guidance-ai-tools/"
+    }
+  ],
+  "files": [
+    {
+      "label": "Read full research",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/reports/research-2026-11.md"
+    },
+    {
+      "label": "Download editable report",
+      "format": "DOCX",
+      "path": "projects/professional/llm-legal-assistant/reports/research-2026-11.docx"
+    }
+  ]
 }
