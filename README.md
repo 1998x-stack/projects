@@ -12,10 +12,10 @@
 
 | Domain / 分类 | Project | Stage | Deliverables |
 | --- | --- | --- | --- |
-| **Knowledge Intelligence / 知识智能** | [LLM × XMind](projects/knowledge/llm-xmind/) | **Published research** (2026-11-08) | [Deep dive (MD)](projects/knowledge/llm-xmind/reports/research-2026-11.md) · [Word](projects/knowledge/llm-xmind/reports/research-2026-11.docx) |
-| **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | **Published research** (2026-11-08) | [Deep dive (MD)](projects/productivity/anti-procrastination-todo/reports/research-2026-11.md) · [Word](projects/productivity/anti-procrastination-todo/reports/research-2026-11.docx) |
-| **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | **Published research** (2026-11-08) | [Deep dive (MD)](projects/professional/llm-legal-assistant/reports/research-2026-11.md) · [Word](projects/professional/llm-legal-assistant/reports/research-2026-11.docx) |
-| **Tools & Infrastructure / 基础设施** | [AI-Agent Landscape](projects/infrastructure/ai-agent-landscape/) | **Published research** (2026-11-09) | [Deep dive (MD)](projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md) |
+| **Knowledge Intelligence / 知识智能** | [LLM × XMind](projects/knowledge/llm-xmind/) | **Published research** (2026-11-08) | [Deep dive](projects/knowledge/llm-xmind/reports/research-2026-11.md) · [MVP PRD v1.0](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.md) · [Editable PRD](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.docx) |
+| **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | Planned · no published research | Research placeholder |
+| **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | Planned · no published research | Research placeholder |
+| **Tools & Infrastructure / 基础设施** | [Category scaffold](projects/infrastructure/) | Empty category | Reserved for future technical projects |
 
 ## Why the system is structured this way
 
@@ -29,13 +29,14 @@ projects/
 │       ├── README.md             # Human-readable project entrypoint
 │       └── reports/
 │           ├── research-2026-11.md
-│           └── research-2026-11.docx
+│           ├── research-2026-11.docx
+│           ├── prd-mvp-v1.0.md
+│           └── prd-mvp-v1.0.docx
 ├── productivity/
-│   └── anti-procrastination-todo/ # Published source-led research
+│   └── anti-procrastination-todo/ # Planned / placeholder
 ├── professional/
-│   └── llm-legal-assistant/      # Published legal AI research + report assets
-└── infrastructure/
-    └── ai-agent-landscape/        # 14-product HN × PH deep-dive
+│   └── llm-legal-assistant/      # Planned / placeholder
+└── infrastructure/              # Reserved for future projects
 site/                             # Public site source: HTML, CSS, JS
 scripts/build.mjs                 # Zero-dependency catalog + Pages generator
 templates/project/                # New-project template
@@ -50,6 +51,8 @@ CONTRIBUTING.md                   # Editorial and evidence standards
 3. Add files to `reports/` and list each file under `files` in `project.json`. Do **not** set `status: published` until a real dated deliverable exists; it also requires source citations.
 4. Run `BASE_PATH=/ node scripts/build.mjs` locally to validate. Preview the `dist/` folder with a static HTTP server.
 5. Push to `main`. The Pages workflow scans every project manifest and generates the new card, dossier and download links **automatically**. No homepage editing required.
+
+**PRD status:** `TraceMap` is a working product concept with an executable MVP specification. Publishing a PRD is not the same as building, testing or launching a product.
 
 **Status vocabulary:** `planned` → `prototype` → `validating` → `launched` (or `published` for completed research). Stage language is descriptive, never a claim of funding or revenue.
 

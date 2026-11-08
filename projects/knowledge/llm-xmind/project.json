@@ -5,14 +5,19 @@
   "titleZh": "LLM × XMind：从自动画图到可信思考",
   "category": "knowledge",
   "status": "published",
-  "type": "Market research",
+  "type": "Research + draft MVP PRD",
   "publishedAt": "2026-11-08",
-  "updatedAt": "2026-11-08",
+  "updatedAt": "2026-11-09",
   "featured": true,
   "order": 1,
   "summary": "A primary-source review of Hacker News, Product Hunt and official product materials, examining where AI-native mind mapping creates durable value.",
   "summaryZh": "基于 Hacker News、Product Hunt 和官方资料的产品研究，分析 AI 思维导图如何从生成工具演化为持续、可信的研究工作流。",
-  "tags": ["LLM", "Mind mapping", "Agents", "Research UX"],
+  "tags": [
+    "LLM",
+    "Mind mapping",
+    "Agents",
+    "Research UX"
+  ],
   "signal": "Evidence-first research workspace",
   "problem": "One-click AI diagrams are fast to produce, but users still need to inspect sources, manage branching context, correct errors and continue work over time.",
   "thesis": "The opportunity is not another diagram generator; it is a research canvas where claims are traceable, edits are atomic, and humans retain control.",
@@ -22,16 +27,47 @@
     "Hacker News discussions highlight branch control, active learning and the limits of auto-generated structures.",
     "Node-level provenance, version diffs and conflict visibility form a testable product wedge, not yet validated PMF."
   ],
-  "risks": ["Research-only evidence; no user retention or revenue data", "Model accuracy and privacy claims require independent testing", "Competitive response from established diagram and AI platforms"],
+  "risks": [
+    "Research-only evidence; no user retention or revenue data",
+    "Model accuracy and privacy claims require independent testing",
+    "Competitive response from established diagram and AI platforms"
+  ],
   "method": "Desk research across Hacker News, Product Hunt and official documentation; published analysis distinguishes sources, user comments and hypotheses.",
   "sourceCount": 21,
   "sourceLinks": [
-    {"label":"Xmind on Product Hunt","url":"https://www.producthunt.com/products/xmind"},
-    {"label":"AI mind maps on Hacker News","url":"https://news.ycombinator.com/item?id=41898076"},
-    {"label":"Xmind MCP user guide","url":"https://xmind.com/user-guide/xmind-mcp"}
+    {
+      "label": "Xmind on Product Hunt",
+      "url": "https://www.producthunt.com/products/xmind"
+    },
+    {
+      "label": "AI mind maps on Hacker News",
+      "url": "https://news.ycombinator.com/item?id=41898076"
+    },
+    {
+      "label": "Xmind MCP user guide",
+      "url": "https://xmind.com/user-guide/xmind-mcp"
+    }
   ],
   "files": [
-    {"label":"Read full report", "format":"Markdown", "path":"projects/knowledge/llm-xmind/reports/research-2026-11.md"},
-    {"label":"Download editable report", "format":"DOCX", "path":"projects/knowledge/llm-xmind/reports/research-2026-11.docx"}
+    {
+      "label": "Read full report",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/reports/research-2026-11.md"
+    },
+    {
+      "label": "Download editable report",
+      "format": "DOCX",
+      "path": "projects/knowledge/llm-xmind/reports/research-2026-11.docx"
+    },
+    {
+      "label": "MVP product requirements (v1.0)",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.md"
+    },
+    {
+      "label": "Download editable MVP PRD",
+      "format": "DOCX",
+      "path": "projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.docx"
+    }
   ]
 }
