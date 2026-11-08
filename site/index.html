@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-base="__BASE_PATH__">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d15"><meta name="description" content="1998X Projects — a research-led portfolio of AI product opportunities, grounded in primary sources and transparent validation stages.">
+  <meta property="og:type" content="website"><meta property="og:title" content="1998X Projects — Clarity before capital"><meta property="og:description" content="An evolving portfolio of evidence-driven AI product research.">
+  <link rel="icon" href="__BASE_PATH__assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="__BASE_PATH__assets/styles.css">
+  <title>1998X Projects · Research-led product portfolio</title>
+  <script defer src="__BASE_PATH__assets/app.js"></script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="site-shell">
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="__BASE_PATH__" aria-label="1998X Projects home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>1998X<span class="brand-muted"> / PROJECTS</span></span></a>
+      <nav class="top-nav" aria-label="Primary navigation"><a href="#portfolio">Portfolio</a><a href="#thesis">Investment lens</a><a href="#process">Process</a></nav>
+      <a class="header-link" href="https://github.com/1998x-stack/projects" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+      <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#portfolio">Portfolio</a><a href="#thesis">Investment lens</a><a href="#process">Process</a><a href="https://github.com/1998x-stack/projects">GitHub ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-aura" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="signal-dot"></span> RESEARCH-LED PRODUCT STUDIO <span class="eyebrow-line"></span> EST. 2026</div>
+          <h1 id="hero-heading">Clarity before <em>capital.</em></h1>
+          <p class="hero-cn">先找到值得解决的问题，再构建值得长期投入的产品。</p>
+          <p class="hero-description">An evolving portfolio of ambitious AI ideas — investigated with primary sources, shaped into product hypotheses, and tested without manufactured certainty.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#portfolio">Explore the portfolio <span aria-hidden="true">↗</span></a><a class="text-link" href="#process">How we work <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-proof"><span class="mini-avatar">↗</span><span><strong>Evidence over hype.</strong> Real sources, clear stages, honest limitations.</span></div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Research to product opportunity visual metaphor">
+          <div class="visual-topline"><span><span class="live-dot"></span> RESEARCH ENGINE / 001</span><span>INTELLIGENCE BOARD</span></div>
+          <div class="visual-core">
+            <div class="orbital orbital-one"></div><div class="orbital orbital-two"></div>
+            <div class="core-mark"><span>1998</span><b>X</b></div>
+            <div class="orbit-node orbit-node-one"><span class="node-spark">✦</span> EVIDENCE</div><div class="orbit-node orbit-node-two"><span class="node-spark">◈</span> THESIS</div><div class="orbit-node orbit-node-three"><span class="node-spark">↗</span> VALIDATE</div>
+          </div>
+          <div class="visual-bottom"><div><span>01 / OBSERVE</span><strong>Real user signals</strong></div><div><span>02 / INTERPRET</span><strong>Testable thesis</strong></div><div><span>03 / BUILD</span><strong>Designed to learn</strong></div></div>
+        </div>
+      </div>
+      <div class="container hero-metrics reveal" id="metrics" aria-live="polite"><div class="metric"><strong data-metric="published">—</strong><span>Published research<br><small>已公开研究</small></span></div><div class="metric"><strong data-metric="tracked">—</strong><span>Opportunity tracks<br><small>持续跟踪方向</small></span></div><div class="metric"><strong data-metric="sources">—</strong><span>Cited source entries<br><small>研究引用来源</small></span></div><div class="metric metric-claim"><span class="metric-icon">◎</span><span>Independent thinking.<br><small>Transparent validation stages.</small></span></div></div>
+    </section>
+    <section class="section section-categories" id="categories"><div class="container"><div class="section-top"><div><div class="section-kicker">01 / THE LANDSCAPE</div><h2>We map the <span>possibilities.</span></h2><p class="section-sub">Clear domains. Distinct theses. Every project in the right place.</p></div><span class="section-index">4 RESEARCH DOMAINS <span aria-hidden="true">↘</span></span></div><div id="category-grid" class="category-grid" aria-live="polite"></div></div></section>
+    <section class="section section-portfolio" id="portfolio"><div class="container"><div class="section-top"><div><div class="section-kicker">02 / THE PORTFOLIO</div><h2>Work in <span>progress.</span></h2><p class="section-sub">Published evidence and future research, clearly distinguished.</p></div><span class="section-index">DYNAMIC PROJECT INDEX <span aria-hidden="true">↘</span></span></div><div class="portfolio-toolbar"><div class="filter-row" role="group" aria-label="Filter projects"><button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">All work</button><button class="filter-chip" type="button" data-filter="published" aria-pressed="false">Published</button><button class="filter-chip" type="button" data-filter="planned" aria-pressed="false">Research queue</button></div><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Search projects..." autocomplete="off"></label></div><div id="active-category" class="active-category" hidden></div><div id="project-grid" class="project-grid" aria-live="polite"></div><div id="empty-state" class="empty-state" hidden><span>⌁</span><strong>No matching projects</strong><p>Try a different category or search term.</p><button id="clear-filters" class="text-link" type="button">Clear filters ↗</button></div></div></section>
+    <section class="section section-lens" id="thesis"><div class="container lens-layout"><div><div class="section-kicker">03 / THE INVESTMENT LENS</div><h2>Good questions.<br><span>Better decisions.</span></h2><p class="section-sub">We do not confuse a beautiful prototype with a validated business. Every thesis has a falsifiable next step.</p><a class="text-link" href="https://github.com/1998x-stack/projects/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Read our research standards ↗</a></div><div class="lens-grid"><div class="lens-item"><span>01</span><div><h3>Problem before product</h3><p>Start with observed user friction, not a list of model capabilities.</p></div></div><div class="lens-item"><span>02</span><div><h3>Evidence with provenance</h3><p>Separate primary sources, user statements and untested interpretations.</p></div></div><div class="lens-item"><span>03</span><div><h3>Craft with restraint</h3><p>Build the smallest experience that can change a meaningful outcome.</p></div></div><div class="lens-item"><span>04</span><div><h3>Conviction must be earned</h3><p>No invented traction, revenue, partnerships or validation metrics.</p></div></div></div></div></section>
+    <section class="section section-process" id="process"><div class="container"><div class="section-top"><div><div class="section-kicker">04 / OUR OPERATING SYSTEM</div><h2>From signal <span>to substance.</span></h2><p class="section-sub">A lightweight loop that makes progress legible to collaborators and investors.</p></div></div><div class="process-grid"><div class="process-step"><span class="step-number">01</span><span class="step-icon">⌁</span><h3>Discover</h3><p>Collect the voice of the market from original discussions and product behavior.</p></div><div class="process-step"><span class="step-number">02</span><span class="step-icon">◈</span><h3>Frame</h3><p>Define user problems, competitive gaps and a thesis that can be disproved.</p></div><div class="process-step"><span class="step-number">03</span><span class="step-icon">◇</span><h3>Prototype</h3><p>Design focused solutions and explicit success criteria before adding scope.</p></div><div class="process-step"><span class="step-number">04</span><span class="step-icon">↗</span><h3>Validate</h3><p>Measure outcomes, document uncertainty and update the portfolio accordingly.</p></div></div></div></section>
+    <section class="closing"><div class="container closing-card"><div><span class="section-kicker">THE NEXT CHAPTER IS OPEN</span><h2>Building in public.<br><em>Thinking long term.</em></h2><p>Follow the research, review the evidence, and watch new project directions take shape.</p></div><a class="btn btn-light" href="https://github.com/1998x-stack/projects" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="__BASE_PATH__"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>1998X<span class="brand-muted"> / PROJECTS</span></span></a><div>Independent research · Claims reflect their documented evidence stage.</div><div>© <span id="year">2026</span> 1998X <a href="https://github.com/1998x-stack/projects">GitHub ↗</a></div></div></footer>
+</div>
+</body></html>

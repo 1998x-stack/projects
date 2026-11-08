@@ -1,0 +1,7 @@
+{
+  "id":"llm-legal-assistant", "title":"Legal Intelligence", "titleZh":"LLM × 法律助手", "subtitle":"AI for professional legal workflows", "category":"professional", "status":"planned", "type":"Research queue", "publishedAt":null, "updatedAt":"2026-11-08", "featured":false, "order":3,
+  "summary":"A planned research track into evidence-sensitive legal AI assistants, professional review and workflow reliability.",
+  "summaryZh":"待开展：研究法律 AI 助手的证据链、专业人员复核和高可靠工作流。",
+  "tags":["Legal AI", "Professional workflows", "Research planned"],
+  "signal":"Research pending", "problem":"Research pending — no validated finding is asserted.", "thesis":"To be developed after primary-source research.", "findings":[], "risks":[], "method":"Not started", "sourceCount":0, "sourceLinks":[], "files":[]
+}

@@ -1,0 +1,7 @@
+{
+  "id":"anti-procrastination-todo", "title":"Beyond the To-Do List", "titleZh":"防拖延 TODO：从计划到行动", "subtitle":"Behavior-aware productivity", "category":"productivity", "status":"planned", "type":"Research queue", "publishedAt":null, "updatedAt":"2026-11-08", "featured":false, "order":2,
+  "summary":"A planned research track into why task systems fail at the moment of action, and how product design might reduce procrastination.",
+  "summaryZh":"待开展：研究为何待办工具无法解决启动困难，以及如何通过产品设计减少拖延。",
+  "tags":["Productivity", "Behavior design", "Research planned"],
+  "signal":"Research pending", "problem":"Research pending — no validated finding is asserted.", "thesis":"To be developed after primary-source research.", "findings":[], "risks":[], "method":"Not started", "sourceCount":0, "sourceLinks":[], "files":[]
+}

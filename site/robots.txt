@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://1998x-stack.github.io/projects/sitemap.xml
