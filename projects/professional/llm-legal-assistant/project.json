@@ -2,23 +2,27 @@
   "id": "llm-legal-assistant",
   "title": "Legal Intelligence",
   "titleZh": "LLM × 法律助手：产品生态与创业机会",
-  "subtitle": "Evidence-grounded NDA contract review · PRD and MVP spec",
+  "subtitle": "Evidence-first legal AI NDA review · Research, PRD and technical architecture",
   "category": "professional",
   "status": "published",
-  "type": "Research & MVP specification",
+  "type": "Market research · PRD · Architecture",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "Research-backed PRD and detailed MVP specification for a lawyer-supervised, evidence-linked New York-law B2B mutual NDA review workbench. No working product or validated demand is claimed.",
-  "summaryZh": "法律 AI 深度调研与可执行 MVP 产品规格：先聚焦纽约州法英文双向 NDA，包含条款级证据、风险卡、律师审批、导出、权限与可复现验收测试；仍属待验证方案。",
+  "summary": "Source-backed legal AI desk research, a scoped New York-law mutual NDA MVP specification, and proposed algorithm, backend and frontend architecture. Product implementation and PMF are not claimed.",
+  "summaryZh": "法律 AI 一手研究、纽约州法双向 NDA 产品规格，以及算法、后端、前端技术设计。产品仍未开发或验证。",
   "tags": [
     "LLM",
     "Legal AI",
     "NDA",
     "Product requirements",
     "Human-in-the-loop",
-    "Evidence traceability"
+    "Evidence traceability",
+    "System architecture",
+    "Backend",
+    "Frontend",
+    "Evidence validation"
   ],
   "signal": "Contract-risk workbench — validation hypothesis",
   "problem": "Business users and lawyers need to understand legal documents, locate consequential risks and produce reviewable work while minimizing hallucinations, privacy exposure and jurisdiction mistakes.",
@@ -90,6 +94,26 @@
       "label": "Download editable MVP specification (Word)",
       "format": "DOCX",
       "path": "projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.docx"
+    },
+    {
+      "label": "Architecture index · 2026-11",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/design/README.md"
+    },
+    {
+      "label": "Algorithm and evidence-chain architecture v1.0",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/design/algorithm-architecture-v1.0.md"
+    },
+    {
+      "label": "Backend and data architecture v1.0",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/design/backend-architecture-v1.0.md"
+    },
+    {
+      "label": "Frontend and review UX architecture v1.0",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/design/frontend-architecture-v1.0.md"
     }
   ]
 }

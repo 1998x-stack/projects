@@ -11,7 +11,7 @@ This dossier reviews **9 Product Hunt products** and selected **Hacker News deba
 1. **Deliver a legal task, not an impressive chat.** Drafting, clause interpretation, risk review, negotiation edits and lawyer handoff are stronger jobs than generic open-ended Q&A.
 2. **User feedback has limits.** Product Hunt reviewers describe benefits such as overcoming a blank page and understanding clauses, while also noting manual cleanup, performance or coverage limits. Review counts are small and not representative.
 3. **HN skepticism is substantive.** Legal research depends on credible, current sources and professional review; citations alone do not prove correct applicability or support.
-4. **Narrow MVP hypothesis:** Start with NDA/SaaS contract review for one jurisdiction, offer original-clause highlighting, evidence-linked risk cards, track-changes output and explicit human approval. **Not yet validated PMF.**
+4. **Narrow MVP hypothesis:** Start with New York-law mutual B2B NDA review, offer original-clause highlighting, evidence-linked risk cards, editable proposed clauses (not Track Changes) and explicit human approval. **Not yet validated PMF.**
 
 ## Product definition · PRD & MVP (2026-11-09)
 
@@ -23,6 +23,19 @@ This dossier reviews **9 Product Hunt products** and selected **Hacker News deba
 | **MVP functional specification v1.0** — F01–F09 user stories, state machine, Given/When/Then acceptance tests, data/API contracts and red-team cases | [Read MVP spec](reports/mvp-functional-spec-v1.0.md) | [Download MVP spec](reports/mvp-functional-spec-v1.0.docx) |
 
 **Design thesis:** upload text-native DOCX/PDF → confirm user role and scope → parse clause anchors → compare against a lawyer-approved versioned NDA playbook → show evidence-linked findings → explicit lawyer decisions → export a reviewed report and proposed clause replacements. True Word Track Changes is **post-MVP**, not a claimed capability.
+
+## Technical architecture · 算法 / 后端 / 前端（2026-11-09）
+
+**Architecture status:** Proposed engineering design, **not** an implemented product. All documents are aligned with F01–F09 and the bounded, lawyer-supervised New York-law mutual NDA MVP.
+
+| Document | Contents |
+| --- | --- |
+| [Architecture index and cross-layer invariants](design/README.md) | Overall system, traceability matrix, ADRs and integrated release checklist |
+| [Algorithm & evidence-chain architecture](design/algorithm-architecture-v1.0.md) | Precise document anchors, scope gate, curated playbook, constrained LLM proposals, citation verification, abstention and benchmark |
+| [Backend & data architecture](design/backend-architecture-v1.0.md) | Modular monolith, PostgreSQL jobs/outbox, matter ACL, versioned API, immutable approvals and export consistency |
+| [Frontend & review workflow architecture](design/frontend-architecture-v1.0.md) | React/TypeScript, five screens, three-panel evidence review, conflict recovery, keyboard accessibility and E2E tests |
+
+**Trust boundary:** The model generates candidates, the server enforces evidence and authorization checks, and a qualified lawyer makes the final approval. No autonomous legal advice, automatic signing or original DOCX Track Changes is included in MVP.
 
 ## Research deliverables
 

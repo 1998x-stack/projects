@@ -14,7 +14,7 @@
 | --- | --- | --- | --- |
 | **Knowledge Intelligence / 知识智能** | [LLM × XMind](projects/knowledge/llm-xmind/) | **Published research** (2026-11-08) | [Deep dive](projects/knowledge/llm-xmind/reports/research-2026-11.md) · [MVP PRD v1.0](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.md) · [Editable PRD](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.docx) · [Technical architecture](projects/knowledge/llm-xmind/design/README.md) |
 | **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | **Research + MVP PRD + architecture design** (2026-11-09; not built) | [Research](projects/productivity/anti-procrastination-todo/reports/research-2026-11.md) · [PRD](projects/productivity/anti-procrastination-todo/reports/prd-mvp-v1.0.md) · [Algorithm](projects/productivity/anti-procrastination-todo/reports/architecture-algorithm-v1.0.md) · [Backend](projects/productivity/anti-procrastination-todo/reports/architecture-backend-v1.0.md) · [Frontend](projects/productivity/anti-procrastination-todo/reports/architecture-frontend-v1.0.md) |
-| **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | **Published research + PRD v1.0** (2026-11-09) · MVP not built | [Research](projects/professional/llm-legal-assistant/reports/research-2026-11.md) · [PRD](projects/professional/llm-legal-assistant/reports/prd-v1.0.md) · [MVP specification](projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.md) |
+| **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | **Published research + PRD + architecture** (2026-11-09) · MVP not built | [Research](projects/professional/llm-legal-assistant/reports/research-2026-11.md) · [PRD](projects/professional/llm-legal-assistant/reports/prd-v1.0.md) · [MVP spec](projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.md) · [Algorithm / Backend / Frontend](projects/professional/llm-legal-assistant/design/) |
 | **Tools & Infrastructure / 基础设施** | [AI-Agent Landscape / EvidenceFlow](projects/infrastructure/ai-agent-landscape/) | **Published research + product design** (2026-11-09; MVP not built) | [Research](projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md) · [PRD](projects/infrastructure/ai-agent-landscape/reports/prd-2026-11.md) · [MVP spec](projects/infrastructure/ai-agent-landscape/reports/mvp-functional-spec-2026-11.md) |
 
 ## Why the system is structured this way
@@ -42,7 +42,7 @@ projects/
 ├── productivity/
 │   └── anti-procrastination-todo/ # Research + MVP PRD + three architecture documents
 ├── professional/
-│   └── llm-legal-assistant/      # Research + PRD + detailed MVP spec
+│   └── llm-legal-assistant/      # Research + PRD + MVP spec + technical design/
 └── infrastructure/
     └── ai-agent-landscape/        # Research + EvidenceFlow PRD + MVP spec
 site/                             # Public site source: HTML, CSS, JS
