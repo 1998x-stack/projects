@@ -49,6 +49,15 @@
       "description": "Evidence-backed AI for learning pathways and consequential education choices.",
       "zhDescription": "让升学、选专业与教育决策更有依据、更可核验。",
       "accent": "mint"
+    },
+    {
+      "id": "code",
+      "name": "Code & Prototypes",
+      "zh": "源代码与产品原型",
+      "number": "06",
+      "description": "Open implementation repositories, runnable prototypes, and transparent engineering validation.",
+      "zhDescription": "研究成果的工程实现、可复现测试与透明的开发阶段。",
+      "accent": "cyan"
     }
   ]
 }

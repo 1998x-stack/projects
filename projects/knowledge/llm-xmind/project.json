@@ -5,7 +5,7 @@
   "titleZh": "LLM × XMind：从自动画图到可信思考",
   "category": "knowledge",
   "status": "published",
-  "type": "Research + MVP PRD + draft engineering design",
+  "type": "Published research + PRD + G0–G2 development prototype",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
@@ -99,5 +99,6 @@
       "format": "YAML",
       "path": "projects/knowledge/llm-xmind/design/contracts/openapi.yaml"
     }
-  ]
+  ],
+  "codeUrl": "https://github.com/1998x-stack/TraceMap"
 }

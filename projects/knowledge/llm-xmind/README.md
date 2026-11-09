@@ -1,6 +1,6 @@
 # LLM × XMind
 
-**Status:** Published research + draft MVP PRD + draft engineering architecture · **Research:** 2026-11-08 · **PRD:** 2026-11-09 · **Category:** Knowledge Intelligence
+**Status:** Published research + draft MVP PRD + implemented development-only code prototype · **Research:** 2026-11-08 · **PRD:** 2026-11-09 · **Category:** Knowledge Intelligence
 
 > Can LLM-powered mind mapping evolve from one-click visualization into a trustworthy workspace for research and decisions?
 
@@ -35,7 +35,7 @@ This project studies the product landscape and original discussions on **Hacker 
 
 ## Engineering status / 技术阶段
 
-These documents are **design specifications only (尚未开发)**. The existing GitHub Pages portfolio is a static showcase, not the TraceMap product. No live FastAPI backend, React application, algorithm-quality results or user validation is claimed.
+Design specifications are linked above. **An initial development-only FastAPI + React Flow prototype now exists** in [1998x-stack/TraceMap](https://github.com/1998x-stack/TraceMap). Its Python API has local tests; a separate repository CI checks Python and frontend builds. No real LLM provider, production login, isolated workers, user study, or verified Xmind import matrix is available. The GitHub Pages portfolio is a static showcase, not the deployed TraceMap application.
 
 ## Evidence scope
 

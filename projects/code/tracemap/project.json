@@ -1,0 +1,35 @@
+{
+  "id": "tracemap",
+  "title": "TraceMap Code",
+  "subtitle": "Evidence-first research workspace · source & engineering",
+  "titleZh": "TraceMap 源代码与开发原型",
+  "category": "code",
+  "status": "prototype",
+  "type": "Development prototype — local only",
+  "updatedAt": "2026-11-09",
+  "featured": false,
+  "order": 1,
+  "summary": "An implementation-first engineering prototype of TraceMap with a FastAPI evidence API, a React Flow workspace, local tests and CI. Real LLM and production authentication are not yet implemented.",
+  "summaryZh": "TraceMap 的可运行开发原型：FastAPI 证据服务、React Flow 研究工作台、自动测试与 CI。真实 LLM、生产认证和正式部署仍未实现。",
+  "tags": [
+    "FastAPI",
+    "React Flow",
+    "Evidence",
+    "Testing"
+  ],
+  "signal": "Readable, tested prototype; not production",
+  "problem": "Research documents and a PRD cannot validate engineering feasibility alone: source anchoring, safe edits and undo need real code and repeatable tests.",
+  "thesis": "Build the evidence and controlled-editing loop first, then test model quality and real user value before expanding features.",
+  "findings": [],
+  "risks": [
+    "Development identity tokens are insecure by design and production mode is disabled",
+    "PDF parsing is synchronous and not sandboxed; not suitable for public exposure",
+    "Generation and Patch use rule-based demonstrations, not a real LLM",
+    "No real Xmind import compatibility test or customer adoption metrics"
+  ],
+  "method": "Live implementation repository and CI; stage labels do not imply production deployment, model accuracy, customer usage or product-market fit.",
+  "sourceCount": 0,
+  "sourceLinks": [],
+  "files": [],
+  "codeUrl": "https://github.com/1998x-stack/TraceMap"
+}
