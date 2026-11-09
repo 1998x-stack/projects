@@ -10,8 +10,8 @@
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "Start-First has a tested local-first engineering prototype and published Hacker News/Product Hunt research and MVP PRD; customer outcomes and PMF remain unvalidated.",
-  "summaryZh": "Start-First 已有本地优先的可运行工程原型，配套 HN/PH 调研、PRD 与技术设计；实际减少拖延效果、留存和 PMF 尚未验证。",
+  "summary": "Published research, MVP specification and a runnable local-first Start-First prototype featuring the Calm Focus v2 responsive UI. Automated tests pass; user outcomes and PMF remain unvalidated.",
+  "summaryZh": "Start-First 已实现 Calm Focus v2 响应式 UI 与可运行本地优先原型，配套 HN/PH 调研、PRD、算法/前后端设计；自动化测试通过，但实际减少拖延效果、留存和 PMF 尚未验证。",
   "tags": [
     "Productivity",
     "Anti-procrastination",
@@ -22,7 +22,10 @@
     "Product specification",
     "Local-first",
     "Algorithm design",
-    "System architecture"
+    "System architecture",
+    "UI/UX",
+    "Design system",
+    "Calm Focus"
   ],
   "signal": "Start-first execution assistance",
   "problem": "Conventional to-do lists help people remember tasks, but often fail at the moment of starting difficult or emotionally aversive work.",
@@ -103,16 +106,23 @@
       "label": "Frontend, interaction and state architecture v1.0",
       "format": "Markdown",
       "path": "projects/productivity/anti-procrastination-todo/reports/architecture-frontend-v1.0.md"
+    },
+    {
+      "label": "UI/UX Design System v2.0 — Calm Focus",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/ui-design-v2.md"
     }
   ],
   "implementationRepository": "https://github.com/1998x-stack/anti-procrastination-todo",
-  "implementationCommit": "291ff85c191e06267e9cea23bf2d6256b4ab5704",
+  "implementationCommit": "b92f9eb44c4223fb924d174053fe23d895acef04",
   "implementationStage": "runnable-prototype-unvalidated",
-  "implementationCI": "https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42553540918",
+  "implementationCI": "https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42562346190",
   "implementationChecks": {
     "date": "2026-11-09",
     "nodeUnitTestsPassed": 26,
-    "chromiumE2EPassed": 10,
-    "coverage": "Selected critical flows; not full 76-AC coverage"
-  }
+    "chromiumE2EPassed": 17,
+    "visualCheckpoints": 5,
+    "coverage": "Targeted domain/UI/browser checks; not complete PRD or device/a11y coverage"
+  },
+  "uiDesignUrl": "https://github.com/1998x-stack/anti-procrastination-todo/blob/main/docs/UI-DESIGN-SYSTEM.md"
 }

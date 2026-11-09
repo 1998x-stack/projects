@@ -16,14 +16,15 @@ Start-First now has a **runnable local-first engineering prototype**, but it rem
 | **[算法设计 v1.0](reports/architecture-algorithm-v1.0.md)** | 算法、产品与 QA | 五类卡点 × 任务场景模板、排序与校验、伪代码、Golden Set、质量门槛与 AI 后续条件 |
 | **[后端与数据架构 v1.0](reports/architecture-backend-v1.0.md)** | 后端、隐私与研究负责人 | Local-First 数据模型、事务/并发、可选研究遥测 API、数据库、同意/删除、安全和发布检查 |
 | **[前端与交互架构 v1.0](reports/architecture-frontend-v1.0.md)** | 前端、UI/UX 与 QA | React/TypeScript 分层、S0–S5 页面、状态机、计时/刷新、多标签、设计系统、E2E 与可访问性 |
+| **[Calm Focus UI/UX 深度优化 v2.0](reports/ui-design-v2.md)** | 产品、设计、工程、QA | 情绪基调、信息架构、响应式视觉系统、卡点编辑、计时及回顾、无障碍规则、代码与视觉 QA 入口 |
 | [市场与竞品调研（Markdown）](reports/research-2026-11.md) | 产品与投资研究 | 8 款竞品深拆 + 3 个补充案例、用户评论与 26 条原始来源 |
 | [市场与竞品调研（Word）](reports/research-2026-11.docx) | 审阅与批注 | 11 页可编辑文档 |
 
 ## Engineering implementation / 代码进度
 
 - **Repository:** [1998x-stack/anti-procrastination-todo](https://github.com/1998x-stack/anti-procrastination-todo) · [source folders](https://github.com/1998x-stack/anti-procrastination-todo/tree/main/code).
-- **Tested revision (2026-11-09):** [291ff85](https://github.com/1998x-stack/anti-procrastination-todo/commit/291ff85c191e06267e9cea23bf2d6256b4ab5704); [GitHub Actions](https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42553540918) reported **26/26 Node unit tests** and **10/10 Chromium browser tests** passing.
-- **Implemented:** task capture, batch import/undo, edit, single focus, user-selected blocker, editable rule-based first step, short session, pause/restore, review, IndexedDB, export and local deletion.
+- **Tested revision (2026-11-09):** [b92f9eb](https://github.com/1998x-stack/anti-procrastination-todo/commit/b92f9eb44c4223fb924d174053fe23d895acef04); [GitHub Actions](https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42562346190) confirmed **26/26 Node unit tests** and **17/17 Chromium browser tests** passed. Five synthetic UI screenshots were visually inspected after CI.
+- **Implemented:** task capture, batch import/undo, edit, single focus, user-selected blocker, editable rule-based first step, short session, pause/restore, review, IndexedDB, export, local deletion and Calm Focus v2 responsive/accessible-first UI with optional local appearance preference.
 - **Not implemented:** online research analytics, AI API, cloud sync, JSON restore, PWA cold-start offline support, clinical/behavioral outcome studies.
 - **Architecture note:** the first tested slice deliberately uses dependency-free browser ES modules instead of the proposed React/TypeScript stack; domain responsibilities remain separated for future migration.
 
