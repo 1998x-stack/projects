@@ -5,19 +5,21 @@
   "subtitle": "From task tracking to meaningful action",
   "category": "productivity",
   "status": "published",
-  "type": "Market research",
+  "type": "Market research & MVP PRD",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "Primary-source market research on anti-procrastination task systems across Hacker News and Product Hunt, comparing behavioral mechanisms, product UX, user criticism and testable product opportunities.",
-  "summaryZh": "基于 Hacker News 与 Product Hunt 的 26 条原始来源，分析 8 款重点竞品及补充案例的产品定位、执行机制、交互设计、用户评价与可验证创业机会。",
+  "summary": "Published primary-source research on anti-procrastination TODO tools plus an implementation-ready Start-First MVP PRD. Product concept and validation plan only; no product or traction is claimed.",
+  "summaryZh": "基于 Hacker News / Product Hunt 的已发布竞品调研与 Start-First MVP 产品方案，包含可落地功能规格、状态机、76 项验收、隐私规则和验证计划；尚未声称产品上线。",
   "tags": [
     "Productivity",
     "Anti-procrastination",
     "Behavior design",
     "Task initiation",
-    "Market research"
+    "Market research",
+    "MVP PRD",
+    "Product specification"
   ],
   "signal": "Start-first execution assistance",
   "problem": "Conventional to-do lists help people remember tasks, but often fail at the moment of starting difficult or emotionally aversive work.",
@@ -32,7 +34,8 @@
   "risks": [
     "Public community comments are a non-representative sample and do not establish product efficacy.",
     "Research does not include hands-on QA, retention cohorts or willingness-to-pay experiments.",
-    "AI-generated steps require user editing and error handling; forced reminders may worsen some users' anxiety."
+    "AI-generated steps require user editing and error handling; forced reminders may worsen some users' anxiety.",
+    "PRD and functional specification describe a proposed product only; no shipped prototype, UX test, or measured behavioral improvement yet."
   ],
   "method": "Qualitative desk research (2017–2026 discussions, with emphasis on recent signals): Hacker News threads and Product Hunt product/review pages; A/B/C evidence distinctions, first-person criticism and explicit research limitations. 26 linked original source entries.",
   "sourceCount": 26,
@@ -72,6 +75,16 @@
       "label": "Download formatted Word report",
       "format": "DOCX",
       "path": "projects/productivity/anti-procrastination-todo/reports/research-2026-11.docx"
+    },
+    {
+      "label": "MVP Product Requirements Document v1.0",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/prd-mvp-v1.0.md"
+    },
+    {
+      "label": "MVP Functional Specification & 76 Acceptance Criteria",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/mvp-functional-spec-v1.0.md"
     }
   ]
 }
