@@ -32,10 +32,11 @@ This project studies the product landscape and original discussions on **Hacker 
 | [03 · Frontend architecture](design/03-frontend.md) | React Flow, inspector, AI Diff UI, state, recovery, accessibility |
 | [04 · API & test matrix](design/04-contracts-testing.md) | HTTP examples, errors, acceptance mapping for all 34 P0 requirements |
 | [OpenAPI 3.1 contract](design/contracts/openapi.yaml) | Draft machine-readable FE/BE integration contract |
+| [05 · Implemented backend & algorithm v0.3](design/05-implementation-v0.3.md) | Tested changes, reproducible CI evidence, code links and production blockers |
 
 ## Engineering status / 技术阶段
 
-Design specifications are linked above. **An initial development-only FastAPI + React Flow prototype now exists** in [1998x-stack/TraceMap](https://github.com/1998x-stack/TraceMap). Its Python API has local tests; a separate repository CI checks Python and frontend builds. No real LLM provider, production login, isolated workers, user study, or verified Xmind import matrix is available. The GitHub Pages portfolio is a static showcase, not the deployed TraceMap application.
+Design specifications are linked above. **An initial development-only FastAPI + React Flow prototype now exists** in [1998x-stack/TraceMap](https://github.com/1998x-stack/TraceMap). Its v0.3 backend/algorithm hardening has [remote CI evidence](https://github.com/1998x-stack/TraceMap/actions/runs/42567240816): 27 Python tests, 3 Chromium E2E tests and frontend build passed. See [implementation update](design/05-implementation-v0.3.md). No real LLM provider, production login, isolated workers, user study, or verified Xmind import matrix is available. The GitHub Pages portfolio is a static showcase, not the deployed TraceMap application.
 
 ## Evidence scope
 
