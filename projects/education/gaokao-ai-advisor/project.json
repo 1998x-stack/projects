@@ -5,7 +5,7 @@
   "subtitle": "Evidence-grounded university choice and application-risk auditing",
   "category": "education",
   "status": "published",
-  "type": "Market research + product opportunity assessment (not built)",
+  "type": "Market research + proposed algorithm/backend/frontend/API architecture (MVP not built)",
   "publishedAt": "2026-11-09",
   "updatedAt": "2026-11-09",
   "featured": true,
@@ -18,7 +18,8 @@
     "LLM",
     "Admissions",
     "Risk audit",
-    "Evidence"
+    "Evidence",
+    "Architecture"
   ],
   "signal": "Traceable evidence + admission-rule verification",
   "problem": "Applicants and families receive conflicting AI university recommendations but lack a reliable way to verify yearly program eligibility, data provenance and risk.",
@@ -64,6 +65,36 @@
       "label": "Full market research & opportunity analysis (2026-11-09)",
       "format": "Markdown",
       "path": "projects/education/gaokao-ai-advisor/reports/research-2026-11.md"
+    },
+    {
+      "label": "Engineering architecture overview (Proposed)",
+      "format": "Markdown",
+      "path": "projects/education/gaokao-ai-advisor/design/README.md"
+    },
+    {
+      "label": "Algorithm, rules & evidence architecture v1.0 (Proposed)",
+      "format": "Markdown",
+      "path": "projects/education/gaokao-ai-advisor/design/algorithm-architecture-v1.0.md"
+    },
+    {
+      "label": "Backend, official data & security architecture v1.0 (Proposed)",
+      "format": "Markdown",
+      "path": "projects/education/gaokao-ai-advisor/design/backend-architecture-v1.0.md"
+    },
+    {
+      "label": "Frontend decision workbench architecture v1.0 (Proposed)",
+      "format": "Markdown",
+      "path": "projects/education/gaokao-ai-advisor/design/frontend-architecture-v1.0.md"
+    },
+    {
+      "label": "Cross-stack API contracts & 24 planned acceptance tests (Proposed)",
+      "format": "Markdown",
+      "path": "projects/education/gaokao-ai-advisor/design/contracts-testing-v1.0.md"
+    },
+    {
+      "label": "OpenAPI 3.1 contract draft (not implemented)",
+      "format": "YAML",
+      "path": "projects/education/gaokao-ai-advisor/design/contracts/openapi.yaml"
     }
   ]
 }

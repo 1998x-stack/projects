@@ -1,6 +1,6 @@
 # LLM × 高考志愿填报 | Gaokao AI Advisor
 
-> **Status / 状态：研究文稿已发布（2026-11-09）；产品概念尚未实现或验证。**
+> **Status / 状态：研究与技术架构设计文稿已发布（2026-11-09）；MVP 尚未实现、未完成数据授权与独立实测。**
 
 ## Project overview / 项目概述
 
@@ -11,6 +11,21 @@
 ## Published deliverable / 已发布文稿
 
 - [**全球竞品、用户声音与创业机会深度调研（2026-11-09）**](reports/research-2026-11.md) — 28 条来源，覆盖产品定位、优缺点、交互设计、真实用户反馈、MVP 范围、架构建议、成功标准和风险边界。
+
+## Proposed technical architecture / 算法、后端、前端设计
+
+针对 **一省一批次一类志愿单位** 的最小验证范围，已拟定以下研发设计（全部为 **Proposed**，尚非运行软件）：
+
+| 文档 | 内容 |
+| --- | --- |
+| [技术设计索引](design/README.md) | MVP 全链路、状态与跨端工程不变量、研发里程碑 |
+| [算法设计](design/algorithm-architecture-v1.0.md) | 官方数据与规则版本、三值资格判定、历史位次、LLM 解释防幻觉 |
+| [后端设计](design/backend-architecture-v1.0.md) | FastAPI / PostgreSQL / 异步任务、快照、权限、隐私和导出 |
+| [前端设计](design/frontend-architecture-v1.0.md) | 画像、草表、证据化风险台、版本对比、安全导出 |
+| [跨端契约与测试](design/contracts-testing-v1.0.md) | F01–F09 追踪、T01–T24 验收测试与发布门禁 |
+| [OpenAPI 3.1 草案](design/contracts/openapi.yaml) | 12 路由的接口、状态、错误与 schema |
+
+**工程不变量：** LLM 不决定报考资格；没有来源、规则或用户输入就明确 UNKNOWN；过期结果不可冒充本年结果；不提供正式志愿提交。
 
 ## Key conclusions / 核心结论
 
@@ -25,8 +40,8 @@
 
 ## Project status & possible next deliverables / 状态与后续
 
-- **已完成：** 桌面研究与完整 Markdown 文稿。
-- **尚未完成：** 真实用户访谈、数据许可核验、独立录取算法回测、MVP 开发及上线。
-- **可能的后续：** MVP PRD、规则引擎设计、数据来源治理、UI 原型和测试规范（均尚未发布）。
+- **已完成：** 桌面研究与完整 Markdown 文稿；算法、后端、前端、接口/验收草案。
+- **尚未完成：** 真实用户访谈、数据许可核验、政策规则审核、独立录取算法回测、测试用例执行、MVP 开发及上线。
+- **可能的后续：** 正式 MVP PRD、具体试点省份的政策 RulePack、可运行代码、交互原型与真实验收报告（均尚未发布）。
 
 [← Education category](../README.md) · [Portfolio home](../../../README.md) · [Public portfolio](https://1998x-stack.github.io/projects/)
