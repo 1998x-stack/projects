@@ -2,27 +2,30 @@
   "id": "ai-agent-landscape",
   "title": "AI-Agent Landscape",
   "titleZh": "AI-Agent 产品市场深度调研",
-  "subtitle": "From autonomy demos to verifiable work delivery",
+  "subtitle": "Research-led EvidenceFlow Agent MVP concept",
   "category": "infrastructure",
   "status": "published",
-  "type": "Market research",
+  "type": "Market research & product requirements",
   "publishedAt": "2026-11-09",
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "An evidence-aware review of 14 AI-agent product lines across general execution, research, coding, personal assistants and enterprise automation, synthesizing Hacker News and Product Hunt feedback.",
-  "summaryZh": "对 14 个 AI-Agent 产品/产品线开展 HN 与 Product Hunt 桌面调研，深度比较定位、交互、控制权、用户反馈与可验证交付的创业机会。",
+  "summary": "Research on 14 AI-agent product lines, followed by the EvidenceFlow Agent concept: an evidence-traceable competitor research assistant with explicit human review, scoped MVP PRD and developer acceptance specs.",
+  "summaryZh": "14 个 AI-Agent 竞品市场调研及 EvidenceFlow Agent 产品方案：可溯源的竞品研究助手，含独立 PRD、核心 MVP 功能规格、接口与验收测试。",
   "tags": [
     "AI Agents",
     "Market research",
     "Hacker News",
     "Product Hunt",
     "Agent UX",
-    "Workflow automation"
+    "Workflow automation",
+    "PRD",
+    "MVP specification",
+    "Evidence provenance"
   ],
-  "signal": "Trust and verifiable task outcomes",
+  "signal": "Published desk research + MVP design (product not built)",
   "problem": "Agent demonstrations obscure the cost of verifying results, recovering from errors and controlling actions, making buyers struggle to identify real ROI.",
-  "thesis": "A focused agent that ships verifiable outcomes inside a controlled workflow is a more testable product wedge than a general-purpose autonomy wrapper. This is a research hypothesis, not validated PMF.",
+  "thesis": "Proposed EvidenceFlow Agent MVP: a narrow, evidence-traceable competitor research workflow with human review, measurable human-time savings and limited read-only permissions. Product and ROI hypotheses remain unvalidated.",
   "findings": [
     "General-purpose, coding, browser, persistent-personal and workflow agents compete through distinct execution and oversight models.",
     "HN critiques tend to examine reliability, security and rework; PH reviews often focus on onboarding and the apparent usefulness of delivered artifacts.",
@@ -33,7 +36,8 @@
     "Published evidence is desk research, without a controlled 14-product benchmark",
     "PH/HN commenters are self-selected and not representative of all users",
     "Product capabilities, billing and privacy boundaries change rapidly",
-    "ROI and willingness to pay must be validated on real tasks"
+    "ROI and willingness to pay must be validated on real tasks",
+    "Product Hunt API commercial use needs explicit authorization; no automated collection without permission"
   ],
   "method": "Primary-source desk research of Hacker News discussions, Product Hunt listings/reviews, vendor documents and independent studies. Includes 36 bibliographic entries; differentiates claims, user opinions and strategic hypotheses.",
   "sourceCount": 36,
@@ -64,6 +68,16 @@
       "label": "Read full research report",
       "format": "Markdown",
       "path": "projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md"
+    },
+    {
+      "label": "Product PRD · EvidenceFlow Agent",
+      "format": "Markdown",
+      "path": "projects/infrastructure/ai-agent-landscape/reports/prd-2026-11.md"
+    },
+    {
+      "label": "MVP functional specification & test cases",
+      "format": "Markdown",
+      "path": "projects/infrastructure/ai-agent-landscape/reports/mvp-functional-spec-2026-11.md"
     }
   ]
 }
