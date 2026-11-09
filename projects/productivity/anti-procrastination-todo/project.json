@@ -10,8 +10,8 @@
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "Published research, MVP specification and a runnable local-first Start-First prototype featuring the Calm Focus v2 responsive UI. Automated tests pass; user outcomes and PMF remain unvalidated.",
-  "summaryZh": "Start-First 已实现 Calm Focus v2 响应式 UI 与可运行本地优先原型，配套 HN/PH 调研、PRD、算法/前后端设计；自动化测试通过，但实际减少拖延效果、留存和 PMF 尚未验证。",
+  "summary": "Local-first Start-First runnable prototype with tested deterministic action engine v2, validated IndexedDB snapshots, and a separate loopback-only opt-in telemetry HTTP reference (not deployed), plus published research, PRD and architecture.",
+  "summaryZh": "Start-First 本地优先原型已实现算法 v2、IndexedDB 数据不变量、仅本机运行的可选研究 API 参考实现；代码通过单元/浏览器测试，但线上后端、生产审计、用户行为效果仍未验证。",
   "tags": [
     "Productivity",
     "Anti-procrastination",
@@ -25,7 +25,11 @@
     "System architecture",
     "UI/UX",
     "Design system",
-    "Calm Focus"
+    "Calm Focus",
+    "Algorithm v2",
+    "Backend optimization",
+    "Data integrity",
+    "Privacy engineering"
   ],
   "signal": "Start-first execution assistance",
   "problem": "Conventional to-do lists help people remember tasks, but often fail at the moment of starting difficult or emotionally aversive work.",
@@ -111,18 +115,31 @@
       "label": "UI/UX Design System v2.0 — Calm Focus",
       "format": "Markdown",
       "path": "projects/productivity/anti-procrastination-todo/reports/ui-design-v2.md"
+    },
+    {
+      "label": "Algorithm Deep Optimization v2.0 — 144 Synthetic Cases and Retry Engine",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/algorithm-optimization-v2.md"
+    },
+    {
+      "label": "Backend & Data Optimization v2.0 — Invariants and Loopback API Security",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/backend-optimization-v2.md"
     }
   ],
   "implementationRepository": "https://github.com/1998x-stack/anti-procrastination-todo",
-  "implementationCommit": "b92f9eb44c4223fb924d174053fe23d895acef04",
+  "implementationCommit": "71071bfed912fd023ac45e68bc5e87b8398e600c",
   "implementationStage": "runnable-prototype-unvalidated",
-  "implementationCI": "https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42562346190",
+  "implementationCI": "https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42567018611",
   "implementationChecks": {
     "date": "2026-11-09",
-    "nodeUnitTestsPassed": 26,
-    "chromiumE2EPassed": 17,
-    "visualCheckpoints": 5,
-    "coverage": "Targeted domain/UI/browser checks; not complete PRD or device/a11y coverage"
+    "nodeUnitTestsPassed": 53,
+    "chromiumE2EPassed": 19,
+    "algorithmSyntheticCases": 144,
+    "benchmarkSamples": 12000,
+    "benchmarkElapsedMs": 71.13,
+    "benchmarkEnvironment": "GitHub Actions Node runner; informational only, not user experience",
+    "coverage": "Targeted algorithm/HTTP/local-storage/browser invariants; not all PRD AC, device/security audit or behavioral impact"
   },
   "uiDesignUrl": "https://github.com/1998x-stack/anti-procrastination-todo/blob/main/docs/UI-DESIGN-SYSTEM.md"
 }

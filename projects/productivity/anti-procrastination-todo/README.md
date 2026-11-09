@@ -13,6 +13,8 @@ Start-First now has a **runnable local-first engineering prototype**, but it rem
 | **[PRD v1.0 — 产品需求文档](reports/prd-mvp-v1.0.md)** | 创始人、PM、设计师 | 产品定位、用户画像、JTBD、目标与非目标、页面、P0/P1/P2、指标、风险和版本门槛 |
 | **[核心 MVP 功能规格 v1.0](reports/mvp-functional-spec-v1.0.md)** | 设计、工程、QA | F01–F08 规则、Task/Step/Session 状态模型、异常场景、隐私事件、**76 条 AC**、6 条 E2E |
 | **[Code repository — runnable prototype](https://github.com/1998x-stack/anti-procrastination-todo)** | 工程、QA、合作开发者 | `code/algorithm`、`domain`、`persistence`、`frontend`、`backend`、自动化测试及 CI；本地运行说明见代码仓库 README |
+| **[算法深度优化 v2.0](reports/algorithm-optimization-v2.md)** | 算法、工程、测试 | 保守中英分类、36 类模板、144 个合成组合、结果缩小重试、安全与微基准 |
+| **[后端与数据深度优化 v2.0](reports/backend-optimization-v2.md)** | 后端、安全、数据与隐私 | IndexedDB 不变量、非生产本机 HTTP 参考、独立写删 token、事件幂等/删除、SQL 蓝图与测试 |
 | **[算法设计 v1.0](reports/architecture-algorithm-v1.0.md)** | 算法、产品与 QA | 五类卡点 × 任务场景模板、排序与校验、伪代码、Golden Set、质量门槛与 AI 后续条件 |
 | **[后端与数据架构 v1.0](reports/architecture-backend-v1.0.md)** | 后端、隐私与研究负责人 | Local-First 数据模型、事务/并发、可选研究遥测 API、数据库、同意/删除、安全和发布检查 |
 | **[前端与交互架构 v1.0](reports/architecture-frontend-v1.0.md)** | 前端、UI/UX 与 QA | React/TypeScript 分层、S0–S5 页面、状态机、计时/刷新、多标签、设计系统、E2E 与可访问性 |
@@ -23,12 +25,19 @@ Start-First now has a **runnable local-first engineering prototype**, but it rem
 ## Engineering implementation / 代码进度
 
 - **Repository:** [1998x-stack/anti-procrastination-todo](https://github.com/1998x-stack/anti-procrastination-todo) · [source folders](https://github.com/1998x-stack/anti-procrastination-todo/tree/main/code).
-- **Tested revision (2026-11-09):** [b92f9eb](https://github.com/1998x-stack/anti-procrastination-todo/commit/b92f9eb44c4223fb924d174053fe23d895acef04); [GitHub Actions](https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42562346190) confirmed **26/26 Node unit tests** and **17/17 Chromium browser tests** passed. Five synthetic UI screenshots were visually inspected after CI.
+- **Tested revision (2026-11-09):** [71071bf](https://github.com/1998x-stack/anti-procrastination-todo/commit/71071bfed912fd023ac45e68bc5e87b8398e600c); [GitHub Actions](https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42567018611) confirmed **53/53 Node unit and API contract tests**, **19/19 Chromium browser tests** and a **12,000-sample algorithm microbenchmark** (71.13 ms on that CI machine). The synthetic tests are not evidence of improved real-life task starting.
 - **Implemented:** task capture, batch import/undo, edit, single focus, user-selected blocker, editable rule-based first step, short session, pause/restore, review, IndexedDB, export, local deletion and Calm Focus v2 responsive/accessible-first UI with optional local appearance preference.
-- **Not implemented:** online research analytics, AI API, cloud sync, JSON restore, PWA cold-start offline support, clinical/behavioral outcome studies.
+- **Not implemented:** production research analytics / opt-in client, durable HTTP backend database adapter, AI API, cloud sync, JSON restore, PWA cold-start support, clinical/behavioral outcome studies. The HTTP reference server is loopback-only, not deployed or connected to user UI.
 - **Architecture note:** the first tested slice deliberately uses dependency-free browser ES modules instead of the proposed React/TypeScript stack; domain responsibilities remain separated for future migration.
 
 A passing test suite validates the tested code paths, **not** all 76 PRD acceptance criteria or product-market fit.
+
+## Deep optimization v2 / 算法与数据工程深度优化
+
+- **算法**：[v2 设计文档](reports/algorithm-optimization-v2.md) 与 [代码](https://github.com/1998x-stack/anti-procrastination-todo/blob/main/code/algorithm/suggest.js)。36 个 blocker × kind 单元、144 个合成任务组合、专业敏感上下文兜底、`partial/not_started` 缩小重试，旧 Step/Session 不会被覆盖。
+- **浏览器数据层**：[v2 设计文档](reports/backend-optimization-v2.md) 与 [快照校验](https://github.com/1998x-stack/anti-procrastination-todo/blob/main/code/persistence/invariants.js)。每次事务校验 Schema、活跃任务/会话唯一性、引用一致性和非法累计时间；旧版本不静默清空。
+- **可选后端**：[本机参考 HTTP 服务](https://github.com/1998x-stack/anti-procrastination-todo/tree/main/code/backend) 有授权、写删凭证隔离、幂等与请求限制测试；**并未上线，用户端也没有接入**。
+- **性能/效果的边界**：CI 合成微基准仅说明 Node 环境下算法可执行，不能用于承诺实际启动时长或减少拖延。真实用户验证依旧是下一阶段任务。
 
 ## 2. Product Thesis / 产品假设
 
