@@ -1,6 +1,6 @@
 # Beyond the To-Do List｜Start-First · 先开始
 
-**Published research + proposed MVP design** · Research: 2026-11-08 · PRD v1.0: 2026-11-09 · Category: Human Productivity
+**Published research + proposed MVP & system architecture design** · Research: 2026-11-08 · PRD v1.0: 2026-11-09 · Category: Human Productivity
 
 > **One-line promise**：当你明知道有件重要的事却开始不了，帮你在约一分钟内确定一个 2～5 分钟、能真正动手的第一步。
 
@@ -12,6 +12,9 @@ Start-First is an **unvalidated product concept**, not a released app or a clini
 | --- | --- | --- |
 | **[PRD v1.0 — 产品需求文档](reports/prd-mvp-v1.0.md)** | 创始人、PM、设计师 | 产品定位、用户画像、JTBD、目标与非目标、页面、P0/P1/P2、指标、风险和版本门槛 |
 | **[核心 MVP 功能规格 v1.0](reports/mvp-functional-spec-v1.0.md)** | 设计、工程、QA | F01–F08 规则、Task/Step/Session 状态模型、异常场景、隐私事件、**76 条 AC**、6 条 E2E |
+| **[算法设计 v1.0](reports/architecture-algorithm-v1.0.md)** | 算法、产品与 QA | 五类卡点 × 任务场景模板、排序与校验、伪代码、Golden Set、质量门槛与 AI 后续条件 |
+| **[后端与数据架构 v1.0](reports/architecture-backend-v1.0.md)** | 后端、隐私与研究负责人 | Local-First 数据模型、事务/并发、可选研究遥测 API、数据库、同意/删除、安全和发布检查 |
+| **[前端与交互架构 v1.0](reports/architecture-frontend-v1.0.md)** | 前端、UI/UX 与 QA | React/TypeScript 分层、S0–S5 页面、状态机、计时/刷新、多标签、设计系统、E2E 与可访问性 |
 | [市场与竞品调研（Markdown）](reports/research-2026-11.md) | 产品与投资研究 | 8 款竞品深拆 + 3 个补充案例、用户评论与 26 条原始来源 |
 | [市场与竞品调研（Word）](reports/research-2026-11.docx) | 审阅与批注 | 11 页可编辑文档 |
 
@@ -50,7 +53,17 @@ MVP 首版为**mobile-first 本地优先 Web**，无需账户。任务正文默�
 - 在招募真实用户前完成数据丢失、隐私与多标签竞态专项 QA；研究数据采用自愿同意原则。
 - 实验结果尚不存在：**不能把文档发布视为已验证产品市场契合（PMF）或真实使用收益。**
 
-## 6. Research integrity / 研究限制
+## 6. Architecture decisions / 算法、后端、前端
+
+三份架构文档分别给出**规则、数据与界面的实现合同**，但不是已实现系统：
+
+- **算法**：本地确定性候选建议（五类卡点、六种场景），只建议一个动作；用户改写永不被自动覆盖。详情：[算法设计](reports/architecture-algorithm-v1.0.md)。
+- **后端**：P0 核心业务无需服务端 API；Task/Step/Session 仅存 IndexedDB。研究参与者主动同意后才可启用结构化事件上报。详情：[后端与数据](reports/architecture-backend-v1.0.md)。
+- **前端**：Mobile-first Web；状态机与 IndexedDB 事务为事实源，解决后台计时、多标签竞争、失败保存与温和恢复。详情：[前端与交互](reports/architecture-frontend-v1.0.md)。
+
+**工程对齐顺序**：先按 [功能规格](reports/mvp-functional-spec-v1.0.md) 固定 F01–F08 / AC-01～76，再并行实现本地规则、领域状态与页面；把遥测 API 作为非阻断实验能力。产品、数据与效果尚未得到真实验收。
+
+## 7. Research integrity / 研究限制
 
 原始研究是公开社区的目的性抽样，评论不具总体代表性；尚无亲自试用全部竞品、用户留存、付费意愿、临床疗效或实测生产力提升数据。PRD 中目标/指标/发布门槛均为设计建议，应在可用性测试和行为实验中验证。
 

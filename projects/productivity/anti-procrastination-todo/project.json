@@ -5,13 +5,13 @@
   "subtitle": "From task tracking to meaningful action",
   "category": "productivity",
   "status": "published",
-  "type": "Market research & MVP PRD",
+  "type": "Market research, MVP PRD & architecture",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "Published primary-source research on anti-procrastination TODO tools plus an implementation-ready Start-First MVP PRD. Product concept and validation plan only; no product or traction is claimed.",
-  "summaryZh": "基于 Hacker News / Product Hunt 的已发布竞品调研与 Start-First MVP 产品方案，包含可落地功能规格、状态机、76 项验收、隐私规则和验证计划；尚未声称产品上线。",
+  "summary": "Published Hacker News/Product Hunt research and proposed Start-First MVP, now with implementation-ready algorithm, backend/data and frontend architecture. Product concept only; not built or validated.",
+  "summaryZh": "已发布反拖延 TODO 竞品研究、Start-First MVP PRD，以及算法、后端数据与前端交互三份工程架构方案；尚未实现或验证产品效果。",
   "tags": [
     "Productivity",
     "Anti-procrastination",
@@ -19,7 +19,10 @@
     "Task initiation",
     "Market research",
     "MVP PRD",
-    "Product specification"
+    "Product specification",
+    "Local-first",
+    "Algorithm design",
+    "System architecture"
   ],
   "signal": "Start-first execution assistance",
   "problem": "Conventional to-do lists help people remember tasks, but often fail at the moment of starting difficult or emotionally aversive work.",
@@ -85,6 +88,21 @@
       "label": "MVP Functional Specification & 76 Acceptance Criteria",
       "format": "Markdown",
       "path": "projects/productivity/anti-procrastination-todo/reports/mvp-functional-spec-v1.0.md"
+    },
+    {
+      "label": "Algorithm architecture and step-suggestion design v1.0",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/architecture-algorithm-v1.0.md"
+    },
+    {
+      "label": "Backend, local data and research telemetry architecture v1.0",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/architecture-backend-v1.0.md"
+    },
+    {
+      "label": "Frontend, interaction and state architecture v1.0",
+      "format": "Markdown",
+      "path": "projects/productivity/anti-procrastination-todo/reports/architecture-frontend-v1.0.md"
     }
   ]
 }
