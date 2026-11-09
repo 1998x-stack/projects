@@ -58,6 +58,15 @@
       "description": "Open implementation repositories, runnable prototypes, and transparent engineering validation.",
       "zhDescription": "研究成果的工程实现、可复现测试与透明的开发阶段。",
       "accent": "cyan"
+    },
+    {
+      "id": "healthcare",
+      "name": "Health & Aging",
+      "zh": "健康与老龄服务",
+      "number": "07",
+      "description": "Human-centered health navigation, aging society and trusted care coordination.",
+      "zhDescription": "关注老龄化、就医协助与可信赖的照护服务交付。",
+      "accent": "mint"
     }
   ]
 }

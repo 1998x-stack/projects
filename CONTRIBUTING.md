@@ -7,7 +7,7 @@ This repository is an investor-readable research and product portfolio. Every en
 ## Directory and naming convention
 
 - Create `projects/<category>/<unique-kebab-case-slug>/project.json`.
-- Categories currently recognized: `knowledge`, `productivity`, `professional`, `infrastructure`. To add a new category, first update `site/config.json`; the builder will discover it.
+- Categories currently recognized: `knowledge`, `productivity`, `professional`, `infrastructure`, `education`, `code`, `healthcare`. To add a new category, first update `site/config.json`; the builder will discover it.
 - Keep a human-friendly `README.md` inside every project directory.
 - Store research in `reports/`, product design in `design/`, prototypes in `prototype/`, and reusable assets in `assets/` as needed. Git does not track empty folders; include a `README.md` for empty categories.
 - Dates use ISO `YYYY-MM-DD`. Keep each file's name predictable (`research-YYYY-MM.md`, `research-YYYY-MM.docx`).

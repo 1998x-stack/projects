@@ -1,0 +1,96 @@
+{
+  "id": "eldercare-medical-escort",
+  "title": "Eldercare Medical Escort",
+  "titleZh": "老龄社会可信陪诊平台：行业深度调研与MVP",
+  "subtitle": "Trustworthy outpatient companion services · Human-operated, privacy-first pilot",
+  "category": "healthcare",
+  "status": "published",
+  "type": "Market research · PRD · MVP specification",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "featured": true,
+  "order": 5,
+  "summary": "Evidence-based research into eldercare medical escort services and a bounded single-city outpatient companion MVP. Includes safety, consent, dispatch, service recovery, compliance and unit-economics validation; no product or market traction claimed.",
+  "summaryZh": "基于政府数据、国内外陪诊实践与用户讨论的行业研究，配套单城常规门诊陪诊 PRD 和详细 MVP 规格；强调安全、老人授权、人工派单、售后及真实经营验证，产品未开发。",
+  "tags": [
+    "Eldercare",
+    "Medical escort",
+    "Aging society",
+    "Healthcare services",
+    "Service operations",
+    "Trust & Safety",
+    "MVP PRD",
+    "Human-in-the-loop",
+    "Privacy",
+    "Unit economics"
+  ],
+  "signal": "China aging demographics + early municipal escort pilots; paid demand and profit require direct validation",
+  "problem": "Adult children often cannot accompany older relatives to routine outpatient visits; a ride alone does not resolve hospital navigation, waiting, logistics, privacy and accurate communication.",
+  "thesis": "A tightly scoped, verified and insured local companion service with explicit elderly consent, manual risk triage, reliable backup dispatch and opt-in family updates may outperform a generic nationwide marketplace. Hypothesis only.",
+  "findings": [
+    "Official Chinese data show 60+ people account for 23.0% of the population in 2025; the population total is not the paid addressable market.",
+    "Shanghai Pudong has published prices and early operational volumes; these illustrate real service delivery but not nationwide profitability.",
+    "Hacker News and Reddit reveal logistical care-coordination and in-clinic accompaniment pain points; forum comments cannot quantify Chinese willingness to pay.",
+    "GB/T 47801—2026 raises service standard expectations without granting medical-practice authority; consent and family information sharing must be separate.",
+    "Pilot in one city with manual risk triage and 2–3 hospitals before investing in scale or AI automation."
+  ],
+  "risks": [
+    "No original field interviews, direct competitor mystery shopping, paid user trials, independently verified retention or company financial data in the desk research.",
+    "Health information, vulnerable users, emergency response, hospital site rules, worker classification, insurance and local registration need specialist review.",
+    "Illustrative 298 CNY order economics are hypotheses; acquisition costs, total staff time and refunds can erase positive contribution.",
+    "The PRD and functional requirements are proposed documents; no deployed software, agency affiliation, medical qualification or healthcare result is claimed."
+  ],
+  "method": "Public-source desk research: China NBS and government/regulatory documents, municipal pilot descriptions, HN/Reddit conversations, Product Hunt adjacent products and primary vendor documentation. Sources classified by evidence quality; 31 original citations in report. No field validation.",
+  "sourceCount": 31,
+  "sourceLinks": [
+    {
+      "label": "China population 2025 · National Bureau of Statistics",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html"
+    },
+    {
+      "label": "GB/T 47801—2026 standard · SAMR",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FEF6F82A9C52F31266C0578CC47EF28B"
+    },
+    {
+      "label": "GB/T 47801 policy explanation · SAMR",
+      "url": "https://www.samr.gov.cn/bzjss/bzjd/art/2026/art_4022d6d5ed64447081e71af307a134db.html"
+    },
+    {
+      "label": "Shanghai Pudong eldercare companion service · local government",
+      "url": "https://www.pudong.gov.cn/zwgk/14559.gkml_ywl_shfl/2025/146/341141.html"
+    },
+    {
+      "label": "Nanjing escort service pilot · local government",
+      "url": "https://www.nanjing.gov.cn/msxx/202608/t20260826_5899609.html"
+    },
+    {
+      "label": "Ask HN: Advice about aging parents",
+      "url": "https://news.ycombinator.com/item?id=29429558"
+    },
+    {
+      "label": "Senior Care category · Product Hunt",
+      "url": "https://www.producthunt.com/categories/senior-care"
+    },
+    {
+      "label": "China Personal Information Protection Law · CAC",
+      "url": "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+    }
+  ],
+  "files": [
+    {
+      "label": "Read full industry research · 2026-11",
+      "format": "Markdown",
+      "path": "projects/healthcare/eldercare-medical-escort/reports/research-2026-11.md"
+    },
+    {
+      "label": "Read professional product requirements · PRD v1.0",
+      "format": "Markdown",
+      "path": "projects/healthcare/eldercare-medical-escort/reports/prd-mvp-v1.0.md"
+    },
+    {
+      "label": "Read detailed MVP functional specification · v1.0",
+      "format": "Markdown",
+      "path": "projects/healthcare/eldercare-medical-escort/reports/mvp-functional-spec-v1.0.md"
+    }
+  ]
+}

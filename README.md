@@ -17,6 +17,7 @@
 | **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | **Working prototype + published research** (2026-11-09; unvalidated) | [Research](projects/productivity/anti-procrastination-todo/reports/research-2026-11.md) · [PRD](projects/productivity/anti-procrastination-todo/reports/prd-mvp-v1.0.md) · [Algorithm](projects/productivity/anti-procrastination-todo/reports/architecture-algorithm-v1.0.md) · [Backend](projects/productivity/anti-procrastination-todo/reports/architecture-backend-v1.0.md) · [Frontend](projects/productivity/anti-procrastination-todo/reports/architecture-frontend-v1.0.md) · [Code](https://github.com/1998x-stack/anti-procrastination-todo) |
 | **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | **Published research + PRD + architecture** (2026-11-09) · MVP not built | [Research](projects/professional/llm-legal-assistant/reports/research-2026-11.md) · [PRD](projects/professional/llm-legal-assistant/reports/prd-v1.0.md) · [MVP spec](projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.md) · [Algorithm / Backend / Frontend](projects/professional/llm-legal-assistant/design/) |
 | **Education & Decision Support / 教育与升学** | [LLM × 高考志愿填报](projects/education/gaokao-ai-advisor/) | **Research + proposed architecture** (2026-11-09; MVP not built) | [Research](projects/education/gaokao-ai-advisor/reports/research-2026-11.md) · [Algorithm](projects/education/gaokao-ai-advisor/design/algorithm-architecture-v1.0.md) · [Backend](projects/education/gaokao-ai-advisor/design/backend-architecture-v1.0.md) · [Frontend](projects/education/gaokao-ai-advisor/design/frontend-architecture-v1.0.md) · [API & tests](projects/education/gaokao-ai-advisor/design/README.md) |
+| **Health & Aging / 健康与老龄服务** | [Eldercare Medical Escort / 老年陪诊](projects/healthcare/eldercare-medical-escort/) | **Published research + PRD + MVP specification** (2026-11-09; product not built) | [Research](projects/healthcare/eldercare-medical-escort/reports/research-2026-11.md) · [PRD](projects/healthcare/eldercare-medical-escort/reports/prd-mvp-v1.0.md) · [Detailed MVP](projects/healthcare/eldercare-medical-escort/reports/mvp-functional-spec-v1.0.md) |
 | **Tools & Infrastructure / 基础设施** | [AI-Agent Landscape / EvidenceFlow](projects/infrastructure/ai-agent-landscape/) | **Published research + product design** (2026-11-09; MVP not built) | [Research](projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md) · [PRD](projects/infrastructure/ai-agent-landscape/reports/prd-2026-11.md) · [MVP spec](projects/infrastructure/ai-agent-landscape/reports/mvp-functional-spec-2026-11.md) |
 
 ## Why the system is structured this way
@@ -41,6 +42,8 @@ projects/
 │           ├── 03-frontend.md
 │           ├── 04-contracts-testing.md
 │           └── contracts/openapi.yaml
+├── healthcare/
+│   └── eldercare-medical-escort/      # Eldercare escort research, PRD and functional MVP design
 ├── code/
 │   └── tracemap/                  # TraceMap engineering prototype, source repo link
 ├── education/
@@ -60,7 +63,7 @@ CONTRIBUTING.md                   # Editorial and evidence standards
 
 ## Adding a new project
 
-1. Pick an existing category: `knowledge`, `productivity`, `professional`, `infrastructure`, `education`, or `code`. Make `projects/<category>/<slug>/` using lowercase `kebab-case` names.
+1. Pick an existing category: `knowledge`, `productivity`, `professional`, `infrastructure`, `education`, `healthcare`, or `code`. Make `projects/<category>/<slug>/` using lowercase `kebab-case` names.
 2. Copy `templates/project/project.json` and `templates/project/README.md`; update `id`, `category`, `title`, `summary`, `status`, and evidence fields. The `id` must match the folder name and be globally unique.
 3. Add research/PRD files to `reports/` and technical design files to `design/`; list every public asset under `files` in `project.json`. Do **not** set `status: published` until a real dated deliverable exists; it also requires source citations.
 4. Run `BASE_PATH=/ node scripts/build.mjs` locally to validate. Preview the `dist/` folder with a static HTTP server.
@@ -71,6 +74,8 @@ CONTRIBUTING.md                   # Editorial and evidence standards
 **TraceMap implementation status:** A development-only [G0–G2 prototype](https://github.com/1998x-stack/TraceMap) is available with local unit/integration tests. It has **no production authentication, durable worker or real LLM integration**. 
 
 **PRD / prototype status:** `TraceMap` is a proposed concept; `Start-First` has an executable, CI-tested technical prototype, not a launched or validated product. Publishing documents alone does not establish traction.
+
+**Eldercare escort status:** Research, PRD and MVP design are documented; no on-site paid pilot, compliant operating entity, software implementation, hospital affiliation, or commercial traction is claimed.
 
 **PRD status:** `EvidenceFlow Agent` is a proposed, unimplemented product concept under AI-Agent Landscape. Published documents are not proof of PMF, technical implementation, or customer traction.
 
