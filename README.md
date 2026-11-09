@@ -15,6 +15,7 @@
 | **Knowledge Intelligence / 知识智能** | [LLM × XMind](projects/knowledge/llm-xmind/) | **Published research** (2026-11-08) | [Deep dive](projects/knowledge/llm-xmind/reports/research-2026-11.md) · [MVP PRD v1.0](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.md) · [Editable PRD](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.docx) · [Technical architecture](projects/knowledge/llm-xmind/design/README.md) |
 | **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | **Research + MVP PRD + architecture design** (2026-11-09; not built) | [Research](projects/productivity/anti-procrastination-todo/reports/research-2026-11.md) · [PRD](projects/productivity/anti-procrastination-todo/reports/prd-mvp-v1.0.md) · [Algorithm](projects/productivity/anti-procrastination-todo/reports/architecture-algorithm-v1.0.md) · [Backend](projects/productivity/anti-procrastination-todo/reports/architecture-backend-v1.0.md) · [Frontend](projects/productivity/anti-procrastination-todo/reports/architecture-frontend-v1.0.md) |
 | **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | **Published research + PRD + architecture** (2026-11-09) · MVP not built | [Research](projects/professional/llm-legal-assistant/reports/research-2026-11.md) · [PRD](projects/professional/llm-legal-assistant/reports/prd-v1.0.md) · [MVP spec](projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.md) · [Algorithm / Backend / Frontend](projects/professional/llm-legal-assistant/design/) |
+| **Education & Decision Support / 教育与升学** | [LLM × 高考志愿填报](projects/education/gaokao-ai-advisor/) | **Published research** (2026-11-09; MVP not built) | [Deep research](projects/education/gaokao-ai-advisor/reports/research-2026-11.md) · [Project brief](projects/education/gaokao-ai-advisor/README.md) |
 | **Tools & Infrastructure / 基础设施** | [AI-Agent Landscape / EvidenceFlow](projects/infrastructure/ai-agent-landscape/) | **Published research + product design** (2026-11-09; MVP not built) | [Research](projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md) · [PRD](projects/infrastructure/ai-agent-landscape/reports/prd-2026-11.md) · [MVP spec](projects/infrastructure/ai-agent-landscape/reports/mvp-functional-spec-2026-11.md) |
 
 ## Why the system is structured this way
@@ -39,6 +40,8 @@ projects/
 │           ├── 03-frontend.md
 │           ├── 04-contracts-testing.md
 │           └── contracts/openapi.yaml
+├── education/
+│   └── gaokao-ai-advisor/         # Gaokao AI research + evidence-based opportunity analysis
 ├── productivity/
 │   └── anti-procrastination-todo/ # Research + MVP PRD + three architecture documents
 ├── professional/
@@ -54,7 +57,7 @@ CONTRIBUTING.md                   # Editorial and evidence standards
 
 ## Adding a new project
 
-1. Pick an existing category: `knowledge`, `productivity`, `professional`, or `infrastructure`. Make `projects/<category>/<slug>/` using lowercase `kebab-case` names.
+1. Pick an existing category: `knowledge`, `productivity`, `professional`, `infrastructure`, or `education`. Make `projects/<category>/<slug>/` using lowercase `kebab-case` names.
 2. Copy `templates/project/project.json` and `templates/project/README.md`; update `id`, `category`, `title`, `summary`, `status`, and evidence fields. The `id` must match the folder name and be globally unique.
 3. Add research/PRD files to `reports/` and technical design files to `design/`; list every public asset under `files` in `project.json`. Do **not** set `status: published` until a real dated deliverable exists; it also requires source citations.
 4. Run `BASE_PATH=/ node scripts/build.mjs` locally to validate. Preview the `dist/` folder with a static HTTP server.

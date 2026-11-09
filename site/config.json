@@ -5,9 +5,50 @@
   "description": "An independent, research-led portfolio exploring ambitious AI product opportunities.",
   "repository": "https://github.com/1998x-stack/projects",
   "categories": [
-    {"id":"knowledge","name":"Knowledge Intelligence","zh":"知识智能","number":"01","description":"Tools for reasoning, research and knowledge synthesis.","zhDescription":"让研究、推理和知识协作变得可信。","accent":"mint"},
-    {"id":"productivity","name":"Human Productivity","zh":"个人效率","number":"02","description":"Products that turn intention into consistent action.","zhDescription":"从意愿到行动，解决真实的效率摩擦。","accent":"violet"},
-    {"id":"professional","name":"Professional AI","zh":"专业服务智能","number":"03","description":"AI for high-stakes, expert-led workflows.","zhDescription":"为法律等高责任工作流设计可验证的 AI。","accent":"orange"},
-    {"id":"infrastructure","name":"Tools & Infrastructure","zh":"工具与基础设施","number":"04","description":"Foundations and experiments enabling the products above.","zhDescription":"为产品落地提供工程能力和实验基础。","accent":"blue"}
+    {
+      "id": "knowledge",
+      "name": "Knowledge Intelligence",
+      "zh": "知识智能",
+      "number": "01",
+      "description": "Tools for reasoning, research and knowledge synthesis.",
+      "zhDescription": "让研究、推理和知识协作变得可信。",
+      "accent": "mint"
+    },
+    {
+      "id": "productivity",
+      "name": "Human Productivity",
+      "zh": "个人效率",
+      "number": "02",
+      "description": "Products that turn intention into consistent action.",
+      "zhDescription": "从意愿到行动，解决真实的效率摩擦。",
+      "accent": "violet"
+    },
+    {
+      "id": "professional",
+      "name": "Professional AI",
+      "zh": "专业服务智能",
+      "number": "03",
+      "description": "AI for high-stakes, expert-led workflows.",
+      "zhDescription": "为法律等高责任工作流设计可验证的 AI。",
+      "accent": "orange"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Tools & Infrastructure",
+      "zh": "工具与基础设施",
+      "number": "04",
+      "description": "Foundations and experiments enabling the products above.",
+      "zhDescription": "为产品落地提供工程能力和实验基础。",
+      "accent": "blue"
+    },
+    {
+      "id": "education",
+      "name": "Education & Decision Support",
+      "zh": "教育与升学决策",
+      "number": "05",
+      "description": "Evidence-backed AI for learning pathways and consequential education choices.",
+      "zhDescription": "让升学、选专业与教育决策更有依据、更可核验。",
+      "accent": "mint"
+    }
   ]
 }

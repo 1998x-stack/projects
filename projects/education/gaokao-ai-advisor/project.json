@@ -1,0 +1,69 @@
+{
+  "id": "gaokao-ai-advisor",
+  "title": "LLM × Gaokao Admissions",
+  "titleZh": "LLM × 高考志愿填报：可信升学决策研究",
+  "subtitle": "Evidence-grounded university choice and application-risk auditing",
+  "category": "education",
+  "status": "published",
+  "type": "Market research + product opportunity assessment (not built)",
+  "publishedAt": "2026-11-09",
+  "updatedAt": "2026-11-09",
+  "featured": true,
+  "order": 2,
+  "summary": "A rigorous landscape of China’s AI Gaokao volunteer-filling services and adjacent Product Hunt / Hacker News products, with independently sourced limitations, user signals and a focused MVP hypothesis.",
+  "summaryZh": "系统研究官方高考志愿服务、夸克/千问、优志愿、掌上高考及海外 AI 升学顾问，明确真实用户信号、数据风险、商业竞争与可验证 MVP 机会。",
+  "tags": [
+    "Education",
+    "Gaokao",
+    "LLM",
+    "Admissions",
+    "Risk audit",
+    "Evidence"
+  ],
+  "signal": "Traceable evidence + admission-rule verification",
+  "problem": "Applicants and families receive conflicting AI university recommendations but lack a reliable way to verify yearly program eligibility, data provenance and risk.",
+  "thesis": "Instead of another free AI university recommender, validate a source-grounded draft-application audit and family decision workspace, scoped to one province and one admission batch.",
+  "findings": [
+    "Official and major-platform no-fee advisory products already cover common school search and recommendation flows, raising the bar for a new standalone recommender.",
+    "Media tests surfaced inconsistent risk tiers across AI tools and material errors against published admissions data.",
+    "Product Hunt tools suggest effective onboarding and longitudinal decision UX; foreign application-probability logic does not transfer directly to China's admission rules.",
+    "The proposed initial wedge is checking an existing draft against versioned official data, with LLM used for explanations rather than hard eligibility decisions."
+  ],
+  "risks": [
+    "Desk research only: no primary user interviews, independent paid conversion evidence or live admissions algorithm benchmark",
+    "Official year-specific data accessibility, licensing and completeness must be verified before launching recommendations",
+    "Model hallucinations and admissions-rule mistakes can lead to consequential user harm; testing is mandatory",
+    "Seasonal demand and strong free competitors complicate distribution and willingness-to-pay validation"
+  ],
+  "method": "Public-source desk research as of 2026-11-09 across Product Hunt, Hacker News, Reddit, App Store, official education authorities, media tests and academic research; facts, voices, vendor claims and hypotheses are explicitly separated.",
+  "sourceCount": 28,
+  "sourceLinks": [
+    {
+      "label": "Ministry of Education: Yangguang Zhiyuan 2026",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/s5147/202606/t20260617_1440970.html"
+    },
+    {
+      "label": "China Newsweek: AI admissions risks",
+      "url": "https://news.inewsweek.cn/society/2026-07-01/30893.shtml"
+    },
+    {
+      "label": "Product Hunt: Reach Best",
+      "url": "https://www.producthunt.com/products/reach-best"
+    },
+    {
+      "label": "Hacker News: Choosing a college",
+      "url": "https://news.ycombinator.com/item?id=547938"
+    },
+    {
+      "label": "Official admissions portal",
+      "url": "https://gaokao.chsi.com.cn/"
+    }
+  ],
+  "files": [
+    {
+      "label": "Full market research & opportunity analysis (2026-11-09)",
+      "format": "Markdown",
+      "path": "projects/education/gaokao-ai-advisor/reports/research-2026-11.md"
+    }
+  ]
+}
