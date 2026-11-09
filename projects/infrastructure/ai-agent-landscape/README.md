@@ -1,6 +1,6 @@
 # AI-Agent Landscape · 产品市场深度调研
 
-**Status:** Published research · **Date:** 2026-11-09 · **Category:** Tools & Infrastructure
+**Status:** Published research + product design · **Date:** 2026-11-09 · **Category:** Tools & Infrastructure · **Product build:** Not started
 
 > **Research thesis:** The real competition among AI agents is shifting from autonomy demos to reliable, inspectable, economically justified work delivery.
 
@@ -18,6 +18,16 @@
 | Artifact | Description |
 | --- | --- |
 | [**Full report · 中文 Markdown**](reports/research-2026-11.md) | 深度竞品表、14 个产品/产品线分析、HN/PH 用户反馈、Agent 交互设计和测评方法 |
+| [**Product PRD · v1.0**](reports/prd-2026-11.md) | EvidenceFlow Agent 产品定位、目标用户、核心路径、P0/P1、指标与 Go/No-Go 评审 |
+| [**MVP functional spec · v1.0**](reports/mvp-functional-spec-2026-11.md) | 功能展开、页面线框、数据模型、状态机、API、许可闸门、24 条验收测试 |
+
+## Proposed MVP / 研发产品方案（尚未实现）
+
+**EvidenceFlow Agent** 是由市场研究推导出的垂直产品假设：帮助 AI/SaaS 创始人和 PM 对 3–5 家竞品开展只读调研，把关键结论绑定到可查看的来源片段、提供冲突/时效提示、人工审核门禁，最后导出 Markdown 报告。
+
+首版**不做**通用浏览器电脑操作、自动发帖/写 CRM、多 Agent 自治或未经授权的数据抓取。Product Hunt API 默认不允许商业使用，需先取得相应许可；MVP 在无授权情况下仅允许人工提供链接和合法笔记。
+
+**开发状态：** 已发布产品设计文档与验收标准；未提供可运行原型、无用户数据/收入或效率实验结论。
 
 ## What is covered / 报告范围
 
