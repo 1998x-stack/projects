@@ -4,14 +4,14 @@
   "titleZh": "TODO List × 拖延症解决：从计划到行动",
   "subtitle": "From task tracking to meaningful action",
   "category": "productivity",
-  "status": "published",
-  "type": "Market research, MVP PRD & architecture",
+  "status": "prototype",
+  "type": "Published research + runnable engineering prototype",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "Published Hacker News/Product Hunt research and proposed Start-First MVP, now with implementation-ready algorithm, backend/data and frontend architecture. Product concept only; not built or validated.",
-  "summaryZh": "已发布反拖延 TODO 竞品研究、Start-First MVP PRD，以及算法、后端数据与前端交互三份工程架构方案；尚未实现或验证产品效果。",
+  "summary": "Start-First has a tested local-first engineering prototype and published Hacker News/Product Hunt research and MVP PRD; customer outcomes and PMF remain unvalidated.",
+  "summaryZh": "Start-First 已有本地优先的可运行工程原型，配套 HN/PH 调研、PRD 与技术设计；实际减少拖延效果、留存和 PMF 尚未验证。",
   "tags": [
     "Productivity",
     "Anti-procrastination",
@@ -104,5 +104,15 @@
       "format": "Markdown",
       "path": "projects/productivity/anti-procrastination-todo/reports/architecture-frontend-v1.0.md"
     }
-  ]
+  ],
+  "implementationRepository": "https://github.com/1998x-stack/anti-procrastination-todo",
+  "implementationCommit": "291ff85c191e06267e9cea23bf2d6256b4ab5704",
+  "implementationStage": "runnable-prototype-unvalidated",
+  "implementationCI": "https://github.com/1998x-stack/anti-procrastination-todo/actions/runs/42553540918",
+  "implementationChecks": {
+    "date": "2026-11-09",
+    "nodeUnitTestsPassed": 26,
+    "chromiumE2EPassed": 10,
+    "coverage": "Selected critical flows; not full 76-AC coverage"
+  }
 }
