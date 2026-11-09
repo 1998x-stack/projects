@@ -47,7 +47,7 @@ for (const category of categories) {
     if(p.status==='planned') assert(p.files.length===0&&p.sourceCount===0&&!p.publishedAt&&p.findings.length===0,`Planned project cannot claim published deliverables/evidence: ${p.id}`);
     if(p.status==='published') assert(p.files.length>0&&p.publishedAt&&p.sourceCount>0,`Published project needs dated deliverables and sources: ${p.id}`);
     for(const f of p.files){
-      assert(typeof f.path==='string' && f.path.startsWith(`projects/${p.category}/${p.id}/reports/`) && !f.path.includes('..'),`Unsafe file path: ${p.id}`);
+      assert(typeof f.path==='string' && (f.path.startsWith(`projects/${p.category}/${p.id}/reports/`) || f.path.startsWith(`projects/${p.category}/${p.id}/design/`)) && !f.path.includes('..'),`Unsafe file path: ${p.id}`);
       assert(await exists(path.join(root,f.path)),`Missing research file: ${f.path}`);
     }
     for(const s of p.sourceLinks) assert(/^https:\/\//.test(s.url),`Source link must use HTTPS: ${p.id}`);
@@ -72,8 +72,10 @@ for(const p of projects){
   const dest=path.join(out,'projects',p.category,p.id);
   await fs.mkdir(dest,{recursive:true});
   await fs.writeFile(path.join(dest,'index.html'),detailSource.replaceAll('__PROJECT_ID__',p.id));
-  const reportDir=path.join(projectRoot,p.category,p.id,'reports');
-  if(await exists(reportDir)) await fs.cp(reportDir,path.join(dest,'reports'),{recursive:true});
+  for (const publicDir of ['reports','design']) {
+    const srcDir = path.join(projectRoot,p.category,p.id,publicDir);
+    if (await exists(srcDir)) await fs.cp(srcDir,path.join(dest,publicDir),{recursive:true});
+  }
 }
 const location='https://1998x-stack.github.io'+base;
 const allUrls=[location,...projects.map(p=>location+`projects/${p.category}/${p.id}/`)];

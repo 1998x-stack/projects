@@ -5,7 +5,7 @@
   "titleZh": "LLM × XMind：从自动画图到可信思考",
   "category": "knowledge",
   "status": "published",
-  "type": "Research + draft MVP PRD",
+  "type": "Research + MVP PRD + draft engineering design",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
@@ -68,6 +68,36 @@
       "label": "Download editable MVP PRD",
       "format": "DOCX",
       "path": "projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.docx"
+    },
+    {
+      "label": "Technical architecture overview",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/design/README.md"
+    },
+    {
+      "label": "Algorithm & AI pipeline",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/design/01-algorithm.md"
+    },
+    {
+      "label": "Backend architecture & data model",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/design/02-backend.md"
+    },
+    {
+      "label": "Frontend architecture & UX",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/design/03-frontend.md"
+    },
+    {
+      "label": "API contract & 34 P0 acceptance tests",
+      "format": "Markdown",
+      "path": "projects/knowledge/llm-xmind/design/04-contracts-testing.md"
+    },
+    {
+      "label": "OpenAPI 3.1 contract (draft)",
+      "format": "YAML",
+      "path": "projects/knowledge/llm-xmind/design/contracts/openapi.yaml"
     }
   ]
 }

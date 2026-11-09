@@ -1,0 +1,619 @@
+openapi: 3.1.0
+info:
+  title: TraceMap MVP API (design contract, NOT implemented)
+  version: 1.0.0-draft
+  description: >-
+    Proposed interface for the TraceMap evidence-first mind-map MVP.
+    This document is a technical design, not a live service declaration.
+servers:
+  - url: /api/v1
+security:
+  - bearerAuth: []
+tags:
+  - name: Projects
+  - name: Sources
+  - name: Maps
+  - name: Jobs
+  - name: Patches
+  - name: Exports
+paths:
+  /projects:
+    get:
+      operationId: listProjects
+      tags: [Projects]
+      responses:
+        '200':
+          description: Projects owned by current user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items: {type: array, items: {$ref: '#/components/schemas/Project'}}
+                required: [items]
+        default: {$ref: '#/components/responses/Error'}
+    post:
+      operationId: createProject
+      tags: [Projects]
+      parameters: [{$ref: '#/components/parameters/IdempotencyKey'}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [title]
+              properties:
+                title: {type: string, minLength: 1, maxLength: 80}
+                goal: {type: string, maxLength: 1000}
+      responses:
+        '201':
+          description: Project created
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Project'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    get:
+      operationId: getProject
+      tags: [Projects]
+      responses:
+        '200':
+          description: Project metadata
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Project'}
+        default: {$ref: '#/components/responses/Error'}
+    delete:
+      operationId: deleteProject
+      tags: [Projects]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      responses:
+        '202': {description: Deletion accepted; online access disabled and object cleanup queued}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/sources:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    get:
+      operationId: listSources
+      tags: [Sources]
+      responses:
+        '200':
+          description: Uploaded sources
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items: {type: array, items: {$ref: '#/components/schemas/Source'}}
+                required: [items]
+        default: {$ref: '#/components/responses/Error'}
+    post:
+      operationId: uploadSource
+      tags: [Sources]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file: {type: string, format: binary}
+              required: [file]
+      responses:
+        '202':
+          description: Source accepted for parsing
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/SourceJobAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/sources/text:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    post:
+      operationId: addTextSource
+      tags: [Sources]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [title, text]
+              properties:
+                title: {type: string, minLength: 1, maxLength: 200}
+                text: {type: string, minLength: 1, maxLength: 80000}
+                format: {type: string, enum: [text, markdown], default: text}
+      responses:
+        '202':
+          description: Source accepted for parsing
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/SourceJobAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/sources/{sid}:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: sid, in: path, required: true, schema: {type: string, format: uuid}}
+    delete:
+      operationId: deleteSource
+      tags: [Sources]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      responses:
+        '200':
+          description: Source removed; associated anchors and verifications degraded
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/RevisionAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/sources/{sid}/paragraphs:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: sid, in: path, required: true, schema: {type: string, format: uuid}}
+    get:
+      operationId: listParagraphs
+      tags: [Sources]
+      responses:
+        '200':
+          description: Extracted original paragraphs for citation inspection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items: {type: array, items: {$ref: '#/components/schemas/Paragraph'}}
+                required: [items]
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/generate:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    post:
+      operationId: startGeneration
+      tags: [Maps]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [goal, sourceIds]
+              properties:
+                goal: {type: string, minLength: 1, maxLength: 1000}
+                language: {type: string, enum: [zh-CN, en], default: zh-CN}
+                sourceIds: {type: array, minItems: 1, maxItems: 5, uniqueItems: true, items: {type: string, format: uuid}}
+      responses:
+        '202':
+          description: Generate job accepted; no formal map change
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/JobAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /jobs/{jobId}:
+    parameters: [{name: jobId, in: path, required: true, schema: {type: string, format: uuid}}]
+    get:
+      operationId: getJob
+      tags: [Jobs]
+      responses:
+        '200':
+          description: Project-owner-scoped job state
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Job'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/generation-drafts/{draftId}:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: draftId, in: path, required: true, schema: {type: string, format: uuid}}
+    get:
+      operationId: getGenerationDraft
+      tags: [Maps]
+      responses:
+        '200':
+          description: Read-only generated map draft
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/MapDocument'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/generation-drafts/{draftId}/commit:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: draftId, in: path, required: true, schema: {type: string, format: uuid}}
+    post:
+      operationId: commitGenerationDraft
+      tags: [Maps]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      responses:
+        '200':
+          description: Committed user-approved draft
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/RevisionAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/map:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    get:
+      operationId: getMap
+      tags: [Maps]
+      responses:
+        '200':
+          description: Latest formally committed map and revision
+          headers:
+            ETag: {schema: {type: string}, description: 'e.g. "rev-7"'}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/MapDocument'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/nodes/ops:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    post:
+      operationId: applyManualNodeOps
+      tags: [Maps]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ApplyOpsRequest'}
+      responses:
+        '200':
+          description: Entire accepted operation set applied atomically
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/RevisionAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/nodes/{nid}/verify:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: nid, in: path, required: true, schema: {type: string, format: uuid}}
+    post:
+      operationId: verifyClaim
+      tags: [Maps]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [verified]
+              properties:
+                verified: {type: boolean}
+      responses:
+        '200':
+          description: Explicit human verification action recorded
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/RevisionAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/patches:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    post:
+      operationId: proposePatch
+      tags: [Patches]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [targetNodeId, baseRevision, operation]
+              properties:
+                targetNodeId: {type: string, format: uuid}
+                baseRevision: {type: integer, minimum: 0}
+                operation: {type: string, enum: [expand, condense, challenge, questions]}
+                allowedSourceIds: {type: array, maxItems: 5, uniqueItems: true, items: {type: string, format: uuid}}
+                goal: {type: string, maxLength: 1000}
+      responses:
+        '202':
+          description: Patch suggestion job accepted; map unchanged
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/JobAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/patches/{patchId}:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: patchId, in: path, required: true, schema: {type: string, format: uuid}}
+    get:
+      operationId: getPatchProposal
+      tags: [Patches]
+      responses:
+        '200':
+          description: Read-only validated candidate operations
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PatchProposal'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/patches/{patchId}/apply:
+    parameters:
+      - {$ref: '#/components/parameters/ProjectId'}
+      - {name: patchId, in: path, required: true, schema: {type: string, format: uuid}}
+    post:
+      operationId: applyPatch
+      tags: [Patches]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [acceptedOpIds]
+              properties:
+                acceptedOpIds: {type: array, minItems: 1, uniqueItems: true, items: {type: string}}
+      responses:
+        '200':
+          description: Selected operations applied as one validated transaction
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/RevisionAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/undo:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    post:
+      operationId: undoLastChange
+      tags: [Maps]
+      parameters:
+        - {$ref: '#/components/parameters/IfMatch'}
+        - {$ref: '#/components/parameters/IdempotencyKey'}
+      responses:
+        '200':
+          description: New revision created via inverse operations
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/RevisionAck'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/view-preferences:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    get:
+      operationId: getViewPreferences
+      tags: [Maps]
+      responses:
+        '200':
+          description: Personal view preferences; not a map revision
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ViewPreferences'}
+        default: {$ref: '#/components/responses/Error'}
+    put:
+      operationId: setViewPreferences
+      tags: [Maps]
+      parameters: [{$ref: '#/components/parameters/IdempotencyKey'}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ViewPreferences'}
+      responses:
+        '200':
+          description: Preferences saved; formal map revision unchanged
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ViewPreferences'}
+        default: {$ref: '#/components/responses/Error'}
+  /projects/{pid}/export:
+    parameters: [{$ref: '#/components/parameters/ProjectId'}]
+    get:
+      operationId: exportMap
+      tags: [Exports]
+      parameters:
+        - name: format
+          in: query
+          required: true
+          schema: {type: string, enum: [md, json]}
+      responses:
+        '200':
+          description: Confirmed map export (Markdown or full structured JSON)
+          content:
+            text/markdown:
+              schema: {type: string}
+            application/json:
+              schema: {$ref: '#/components/schemas/MapDocument'}
+        default: {$ref: '#/components/responses/Error'}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: >-
+        Abstract auth contract; deployed product may instead use HttpOnly BFF cookies + CSRF.
+  parameters:
+    ProjectId:
+      name: pid
+      in: path
+      required: true
+      schema: {type: string, format: uuid}
+    IfMatch:
+      name: If-Match
+      in: header
+      required: true
+      description: 'Global project revision ETag, for example "rev-7".'
+      schema: {type: string, pattern: '^"rev-[0-9]+"$'}
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema: {type: string, format: uuid}
+  responses:
+    Error:
+      description: API error (status depends on cause; see error catalog in design/04)
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ErrorEnvelope'}
+  schemas:
+    Project:
+      type: object
+      required: [id, title, revision]
+      properties:
+        id: {type: string, format: uuid}
+        title: {type: string}
+        goal: {type: string}
+        revision: {type: integer, minimum: 0}
+        updatedAt: {type: string, format: date-time}
+    Source:
+      type: object
+      required: [id, projectId, kind, status, extractedCodepoints]
+      properties:
+        id: {type: string, format: uuid}
+        projectId: {type: string, format: uuid}
+        title: {type: string}
+        kind: {type: string, enum: [text, markdown, pdf]}
+        status: {type: string, enum: [queued, parsing, ready, failed, deleted]}
+        extractedCodepoints: {type: integer, minimum: 0}
+        errorCode: {type: [string, 'null']}
+    Paragraph:
+      type: object
+      required: [id, sourceId, ordinal, text, sha256]
+      properties:
+        id: {type: string, format: uuid}
+        sourceId: {type: string, format: uuid}
+        ordinal: {type: integer, minimum: 0}
+        pageNo: {type: [integer, 'null'], minimum: 1}
+        text: {type: string}
+        sha256: {type: string}
+    EvidenceRef:
+      type: object
+      required: [id, sourceId, paragraphId, start, end, exactQuote, anchorStatus]
+      properties:
+        id: {type: string, format: uuid}
+        sourceId: {type: string, format: uuid}
+        paragraphId: {type: string, format: uuid}
+        start: {type: integer, minimum: 0, description: Unicode code-point start (inclusive)}
+        end: {type: integer, minimum: 1, description: Unicode code-point end (exclusive)}
+        exactQuote: {type: string, minLength: 1}
+        quoteSha256: {type: string}
+        anchorStatus: {type: string, enum: [anchored, unverified, invalid, source_deleted]}
+    Node:
+      type: object
+      required: [id, parentId, sortOrder, type, title, origin, verification, evidenceRefs]
+      properties:
+        id: {type: string, format: uuid}
+        parentId: {type: [string, 'null'], format: uuid}
+        sortOrder: {type: integer, minimum: 0}
+        type: {type: string, enum: [topic, claim, evidence, counterpoint, question, decision]}
+        title: {type: string, minLength: 1, maxLength: 160}
+        note: {type: string}
+        origin: {type: string, enum: [ai, user]}
+        verification: {type: string, enum: [unverified, verified_by_user]}
+        evidenceRefs: {type: array, items: {$ref: '#/components/schemas/EvidenceRef'}}
+    MapDocument:
+      type: object
+      required: [projectId, revision, rootNodeId, nodes]
+      properties:
+        projectId: {type: string, format: uuid}
+        revision: {type: integer, minimum: 0}
+        rootNodeId: {type: string, format: uuid}
+        nodes: {type: array, maxItems: 120, items: {$ref: '#/components/schemas/Node'}}
+        isDraft: {type: boolean, default: false}
+    NodeOp:
+      type: object
+      description: >-
+        Discriminated in application code by op. Domain validator owns path,
+        cycle, protected-node and evidence invariants, not JSON Schema alone.
+      required: [opId, op]
+      properties:
+        opId: {type: string}
+        op: {type: string, enum: [add_node, update_node, delete_subtree, move_subtree]}
+        targetId: {type: string, format: uuid}
+        parentId: {type: string, format: uuid}
+        node: {$ref: '#/components/schemas/Node'}
+        title: {type: string}
+        dependsOn: {type: array, items: {type: string}}
+    ApplyOpsRequest:
+      type: object
+      required: [ops]
+      properties:
+        ops: {type: array, minItems: 1, maxItems: 120, items: {$ref: '#/components/schemas/NodeOp'}}
+    PatchProposal:
+      type: object
+      required: [id, targetNodeId, baseRevision, status, proposedOps]
+      properties:
+        id: {type: string, format: uuid}
+        targetNodeId: {type: string, format: uuid}
+        baseRevision: {type: integer, minimum: 0}
+        status: {type: string, enum: [proposed, applied, dismissed, expired]}
+        expiresAt: {type: string, format: date-time}
+        proposedOps: {type: array, items: {$ref: '#/components/schemas/NodeOp'}}
+    JobAck:
+      type: object
+      required: [jobId]
+      properties:
+        jobId: {type: string, format: uuid}
+    SourceJobAck:
+      allOf:
+        - {$ref: '#/components/schemas/JobAck'}
+        - type: object
+          required: [sourceId, revision]
+          properties:
+            sourceId: {type: string, format: uuid}
+            revision: {type: integer, minimum: 0}
+    Job:
+      type: object
+      required: [id, status, kind]
+      properties:
+        id: {type: string, format: uuid}
+        status: {type: string, enum: [queued, running, succeeded, failed, cancelled]}
+        kind: {type: string, enum: [parse, generate, patch, delete]}
+        stage: {type: string}
+        resultId: {type: [string, 'null'], format: uuid}
+        error: {$ref: '#/components/schemas/ErrorDetail'}
+    RevisionAck:
+      type: object
+      required: [revision, changeSetId]
+      properties:
+        revision: {type: integer, minimum: 0}
+        changeSetId: {type: string, format: uuid}
+    ViewPreferences:
+      type: object
+      required: [expandedNodeIds, viewport]
+      properties:
+        expandedNodeIds: {type: array, items: {type: string, format: uuid}}
+        viewport:
+          type: object
+          required: [x, y, zoom]
+          properties:
+            x: {type: number}
+            y: {type: number}
+            zoom: {type: number, minimum: 0.1, maximum: 4}
+    ErrorDetail:
+      type: object
+      required: [code, message, retryable, requestId]
+      properties:
+        code: {type: string}
+        message: {type: string}
+        retryable: {type: boolean}
+        requestId: {type: string}
+        details: {type: object, additionalProperties: true}
+    ErrorEnvelope:
+      type: object
+      required: [error]
+      properties:
+        error: {$ref: '#/components/schemas/ErrorDetail'}
