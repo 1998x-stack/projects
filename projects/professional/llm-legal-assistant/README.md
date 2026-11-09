@@ -13,6 +13,17 @@ This dossier reviews **9 Product Hunt products** and selected **Hacker News deba
 3. **HN skepticism is substantive.** Legal research depends on credible, current sources and professional review; citations alone do not prove correct applicability or support.
 4. **Narrow MVP hypothesis:** Start with NDA/SaaS contract review for one jurisdiction, offer original-clause highlighting, evidence-linked risk cards, track-changes output and explicit human approval. **Not yet validated PMF.**
 
+## Product definition · PRD & MVP (2026-11-09)
+
+**Concept status:** Specification published; **not** a shipped or validated legal AI product. The first release is scoped to English **Mutual B2B NDAs governed by New York law**, prepared and **approved by a qualified contract lawyer**. Other contract types, general legal advice, judicial outcome predictions and automatic execution are outside MVP.
+
+| Product document | Markdown | Editable Word |
+| --- | --- | --- |
+| **PRD v1.0** — positioning, persona, product scope, success metrics, risk controls, pilot phases and release gates | [Read PRD](reports/prd-v1.0.md) | [Download PRD](reports/prd-v1.0.docx) |
+| **MVP functional specification v1.0** — F01–F09 user stories, state machine, Given/When/Then acceptance tests, data/API contracts and red-team cases | [Read MVP spec](reports/mvp-functional-spec-v1.0.md) | [Download MVP spec](reports/mvp-functional-spec-v1.0.docx) |
+
+**Design thesis:** upload text-native DOCX/PDF → confirm user role and scope → parse clause anchors → compare against a lawyer-approved versioned NDA playbook → show evidence-linked findings → explicit lawyer decisions → export a reviewed report and proposed clause replacements. True Word Track Changes is **post-MVP**, not a claimed capability.
+
 ## Research deliverables
 
 | File | Description |

@@ -2,22 +2,23 @@
   "id": "llm-legal-assistant",
   "title": "Legal Intelligence",
   "titleZh": "LLM × 法律助手：产品生态与创业机会",
-  "subtitle": "Evidence-grounded legal AI product research",
+  "subtitle": "Evidence-grounded NDA contract review · PRD and MVP spec",
   "category": "professional",
   "status": "published",
-  "type": "Market research",
+  "type": "Research & MVP specification",
   "publishedAt": "2026-11-08",
   "updatedAt": "2026-11-09",
   "featured": true,
   "order": 2,
-  "summary": "A source-linked research dossier on LLM-powered legal assistants across Hacker News and Product Hunt, covering positioning, product design, user feedback, reliability risks and a narrow-contract MVP thesis.",
-  "summaryZh": "基于 Hacker News 与 Product Hunt 一手讨论的法律 AI 产品研究：竞品定位、设计范式、用户评价、证据可靠性与合同审阅 MVP 假设。",
+  "summary": "Research-backed PRD and detailed MVP specification for a lawyer-supervised, evidence-linked New York-law B2B mutual NDA review workbench. No working product or validated demand is claimed.",
+  "summaryZh": "法律 AI 深度调研与可执行 MVP 产品规格：先聚焦纽约州法英文双向 NDA，包含条款级证据、风险卡、律师审批、导出、权限与可复现验收测试；仍属待验证方案。",
   "tags": [
     "LLM",
     "Legal AI",
-    "Contract review",
-    "Product research",
-    "Human-in-the-loop"
+    "NDA",
+    "Product requirements",
+    "Human-in-the-loop",
+    "Evidence traceability"
   ],
   "signal": "Contract-risk workbench — validation hypothesis",
   "problem": "Business users and lawyers need to understand legal documents, locate consequential risks and produce reviewable work while minimizing hallucinations, privacy exposure and jurisdiction mistakes.",
@@ -32,7 +33,8 @@
     "Small, nonrepresentative PH review samples and anonymous HN discourse cannot establish demand or adoption.",
     "No product trials, paid conversion/retention measurement, legal accuracy benchmark or independent security audit were conducted.",
     "Jurisdiction, license-to-practice, model hallucinations, confidentiality, privilege and source recency require specialist review.",
-    "No conclusions in this research should be used as legal advice."
+    "No conclusions in this research should be used as legal advice.",
+    "The v1.0 PRD/MVP documents are design specifications only; no product implementation, security certification or legal performance benchmark is claimed."
   ],
   "method": "Desk research of original Product Hunt launch/review pages (nine representative products) and Hacker News threads, cross-checked against Stanford HAI's 2024 study, ABA Formal Opinion 512 and vendor documentation. Evidence grades distinguish independent findings, first-person comments, discussion opinions and promotional claims.",
   "sourceCount": 22,
@@ -68,6 +70,26 @@
       "label": "Download editable report",
       "format": "DOCX",
       "path": "projects/professional/llm-legal-assistant/reports/research-2026-11.docx"
+    },
+    {
+      "label": "Read product requirements (PRD v1.0)",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/reports/prd-v1.0.md"
+    },
+    {
+      "label": "Download editable PRD (Word)",
+      "format": "DOCX",
+      "path": "projects/professional/llm-legal-assistant/reports/prd-v1.0.docx"
+    },
+    {
+      "label": "Read MVP functional specification v1.0",
+      "format": "Markdown",
+      "path": "projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.md"
+    },
+    {
+      "label": "Download editable MVP specification (Word)",
+      "format": "DOCX",
+      "path": "projects/professional/llm-legal-assistant/reports/mvp-functional-spec-v1.0.docx"
     }
   ]
 }
