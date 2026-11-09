@@ -15,7 +15,7 @@
 | **Knowledge Intelligence / 知识智能** | [LLM × XMind](projects/knowledge/llm-xmind/) | **Published research** (2026-11-08) | [Deep dive](projects/knowledge/llm-xmind/reports/research-2026-11.md) · [MVP PRD v1.0](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.md) · [Editable PRD](projects/knowledge/llm-xmind/reports/prd-mvp-v1.0.docx) |
 | **Human Productivity / 个人效率** | [Beyond the To-Do List](projects/productivity/anti-procrastination-todo/) | **Research + proposed MVP PRD** (2026-11-09) | [Research](projects/productivity/anti-procrastination-todo/reports/research-2026-11.md) · [PRD v1.0](projects/productivity/anti-procrastination-todo/reports/prd-mvp-v1.0.md) · [Functional spec](projects/productivity/anti-procrastination-todo/reports/mvp-functional-spec-v1.0.md) |
 | **Professional AI / 专业服务智能** | [Legal Intelligence](projects/professional/llm-legal-assistant/) | Planned · no published research | Research placeholder |
-| **Tools & Infrastructure / 基础设施** | [Category scaffold](projects/infrastructure/) | Empty category | Reserved for future technical projects |
+| **Tools & Infrastructure / 基础设施** | [AI-Agent Landscape / EvidenceFlow](projects/infrastructure/ai-agent-landscape/) | **Published research + product design** (2026-11-09; MVP not built) | [Research](projects/infrastructure/ai-agent-landscape/reports/research-2026-11.md) · [PRD](projects/infrastructure/ai-agent-landscape/reports/prd-2026-11.md) · [MVP spec](projects/infrastructure/ai-agent-landscape/reports/mvp-functional-spec-2026-11.md) |
 
 ## Why the system is structured this way
 
@@ -36,7 +36,8 @@ projects/
 │   └── anti-procrastination-todo/ # Published research + proposed MVP PRD
 ├── professional/
 │   └── llm-legal-assistant/      # Planned / placeholder
-└── infrastructure/              # Reserved for future projects
+└── infrastructure/
+    └── ai-agent-landscape/        # Research + EvidenceFlow PRD + MVP spec
 site/                             # Public site source: HTML, CSS, JS
 scripts/build.mjs                 # Zero-dependency catalog + Pages generator
 templates/project/                # New-project template
@@ -53,6 +54,8 @@ CONTRIBUTING.md                   # Editorial and evidence standards
 5. Push to `main`. The Pages workflow scans every project manifest and generates the new card, dossier and download links **automatically**. No homepage editing required.
 
 **PRD status:** `TraceMap` and `Start-First` are product concepts with MVP specifications. Publishing a PRD is not the same as building, testing or launching a product.
+
+**PRD status:** `EvidenceFlow Agent` is a proposed, unimplemented product concept under AI-Agent Landscape. Published documents are not proof of PMF, technical implementation, or customer traction.
 
 **Status vocabulary:** `planned` → `prototype` → `validating` → `launched` (or `published` for completed research). Stage language is descriptive, never a claim of funding or revenue.
 
